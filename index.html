@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nectar Digit : Providing Smart Solutions and Helping to Succeed Your Business</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap 5 CSS -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap JS Bundle (Popper included) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm bg-light" aria-label="Primary Navigation">
+        <div class="navbar navbar-expand-sm bg-light" aria-label="Primary Navigation">
             <div class="container-fluid d-flex align-items-center justify-content-center">
             
                 <!-- Logo + Navbar links wrapper -->
@@ -20,7 +41,7 @@
 
                     <!-- Logo -->
                     <a class="navbar-brand me-5" href="#">
-                        <img src="/site-logo.png" alt="Nectar Digit logo" height="50">
+                        <img src="/images/site-logo.png" alt="Nectar Digit logo" height="50">
                     </a>
                     
 
@@ -49,13 +70,62 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+            <div class="toggle-nav">
+                <button class="me-3">SwitchMode</button>
+            </div>    
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                ..
+            </div>
+        </div>
+        
     </header>    
     
     
 
     <main>
+        <section class="hero-section py-5">
+            <div id="particles-js"></div>
+            <div class="container">
+                <div class="row align-items-center">
 
+                    <!-- LEFT CONTENT -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h1 class="fw-bold">Lets Grow Together and Be Success</h1>
+                        <p>
+                            Nectar Digit is a leading IT agency dedicated to empowering businesses through the strategic implementation of technology. We are passionate about helping our clients achieve their goals.
+
+                        </p>
+                        <a href="#" class="btn btn-danger px-4">Learn More</a>
+                    </div>
+
+                    <!-- RIGHT SLIDER -->
+                    <div class="col-lg-6">
+                        <div class="owl-carousel hero-slider">
+                            <div class="item">
+                                <img src="/images/slide1.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="/images/slide2.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="/images/slide3.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
 
@@ -67,7 +137,7 @@
 
                 <!-- Column 1: Logo + About -->
                 <div class="col-md-4 mb-4">
-                    <img src="/site-logo.png" alt="logo" height="50" class="mb-3">
+                    <img src="/images/site-logo.png" alt="logo" height="50" class="mb-3">
                     <p>
                     Best and reliable Digital Marketing company with expertise in SEO, Software Development, Web Design / Development, and Mobile application
                     </p>
@@ -108,12 +178,12 @@
                     </form>
 
                     <!-- Follow Us Section -->
-                    <h3>Follow Us</h3>
-                    <div class="social-icons d-flex gap-10px">
-                        <a href="#" aria-label="Facebook"><img src="/youtube.png" alt="Youtube" width="30"></a>
-                        <a href="#" aria-label="Instagram"><img src="/instagram.png" alt="Instagram" width="30"></a>
-                        <a href="#" aria-label="Twitter"><img src="/twitter.png" alt="Twitter" width="30"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="/facebook.png" alt="Facebook" width="30"></a>
+                    <h3>Follow Us:</h3>
+                    <div class="social-icons d-flex" style="gap: 10px">
+                        <a href="#" aria-label="Youtube"><img src="/images/youtube.png" alt="Youtube" width="30"></a>
+                        <a href="#" aria-label="Instagram"><img src="/images/instagram.png" alt="Instagram" width="30"></a>
+                        <a href="#" aria-label="Twitter"><img src="/images/twitter.png" alt="Twitter" width="30"></a>
+                        <a href="#" aria-label="Facebook"><img src="/images/facebook.png" alt="Facebook" width="30"></a>
                     </div>
                     
                 </div>
