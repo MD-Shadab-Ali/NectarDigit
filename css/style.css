@@ -1,10 +1,20 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans Devanagari", serif;
+    font-size: 14px;
+    
+}
+
 /* Show dropdown menu on hover */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 5px; /* Optional: removes spacing below parent */
     
 }
-/* Maintains for particles.js */
+/* Settings for particles.js */
 .hero-section {
     position: relative;
     overflow: hidden;
@@ -130,3 +140,163 @@
     width: 100%;
     object-fit: cover;
 }
+
+/* <Section 2> */
+.worked-section {
+    position: relative;
+    display: flex;
+    justify-content: center; /* centers content horizontally */
+    align-items: center;     /* centers content vertically */
+    height: 700px;           /* adjust as needed */
+    overflow: hidden;
+    background: #fff;        /* fallback background */
+}
+
+/* SIDE IMAGES */
+.bg-img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 30%;        /* leaves space for center content */
+    object-fit: cover;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.bg-left {
+    left: 0;
+}
+
+.bg-right {
+    right: 0;
+}
+
+/* CENTER CONTENT */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 50%;         /* ensures content stays between images */
+}
+
+.content-wrapper p{
+    color: #424242;
+    line-height: 25px;
+    /* font-size: 1px; */
+}
+
+/* TEXT <p> */
+.worked-text {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* LOGOS */
+.logo-carousel {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+.logo-carousel .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    
+
+}
+
+.logo-carousel img {
+    max-height: 70px;
+    filter: grayscale(0%);
+    transition: 0.3s;
+}
+
+.logo-carousel img:hover {
+    margin-bottom: 20px;
+    transform: scale(1.05);
+
+}
+
+/* <Section 3> */
+/* ===== SERVICES SECTION ===== */
+
+.services-section {
+    background: rgb(4, 65, 137);
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.section-subtitle {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* CARD DESIGN */
+.service-card {
+    background: rgb(4, 65, 137);
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+    border: 1px solid rgb(4, 65, 137);
+}
+
+/* HOVER EFFECT (IMPORTANT) */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* ICON BOX */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #f1f4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box img {
+    width: 40px;
+}
+
+/* TEXT */
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* LINK */
+.service-card a {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #ff0004;
+    text-decoration: none;
+}
+
+.service-card a:hover {
+    color: #fff;
+}
+
+/* CAROUSEL FIXES */
+.services-carousel .owl-stage-outer {
+    padding: 20px 0;
+}
+

@@ -6,7 +6,7 @@ $(document).ready(function() {
         items: 1,
         autoplay: true,
         autoplayTimeout: 3000,
-        dots: true,
+        dots: false,
         nav: false,
         responsive: {
             0: { items: 1 },
@@ -16,7 +16,7 @@ $(document).ready(function() {
         }
     });
 
-
+    // <Section 1>
     // Particles
     particlesJS("particles-js", {
     particles: {
@@ -129,4 +129,41 @@ $(document).ready(function() {
     retina_detect: true
   });
 
+    // <Section 2>
+    // LOGO CAROUSEL (We Have Worked)
+    $('.logo-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        smartSpeed: 600,
+        dots: false,
+        nav: false,
+        responsive: {
+            0: { items: 2 },
+            576: { items: 3 },
+            768: { items: 5 },
+            992: { items: 6 }
+        }
+    });
+
+    // <Section 3>
+    // Services Carousel
+    $('.services-carousel').owlCarousel({
+        loop: true,
+        margin: 25,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        dots: false,
+        nav: false,
+        navText: ['←','→'],
+        responsive: {
+            0: { items: 1 },
+            576: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
+        }
+    });
 });
