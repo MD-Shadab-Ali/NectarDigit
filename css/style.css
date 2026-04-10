@@ -404,7 +404,7 @@ body {
 }
 
 .counter-card:hover .counter-icon {
-    background: linear-gradient(135deg, #006eff, #2b5bff);
+    background: linear-gradient(135deg, #ff0004, #ff0004);
     box-shadow: 0 12px 20px rgba(0, 110, 255, 0.2);
 }
 
@@ -450,7 +450,7 @@ body {
 .counter-card .divider-light {
     width: 48px;
     height: 3px;
-    background: #006eff30;
+    background: #006eff;
     margin: 1rem auto 0 auto;
     border-radius: 4px;
     transition: width 0.2s ease;
@@ -458,7 +458,7 @@ body {
 
 .counter-card:hover .divider-light {
     width: 70px;
-    background: #006eff;
+    background: #ff0004;
 }
 
 /* AOS custom animation (optional but smooth) */
