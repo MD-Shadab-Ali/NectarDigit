@@ -56,7 +56,75 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* OFFCANVAS WIDTH */
+.custom-offcanvas {
+    width: 320px;
+}
 
+/* HEADER */
+.custom-header {
+    background: #0d47a1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers horizontally */
+    position: relative;
+    
+}
+/* Center + Bigger Heading */
+.custom-header h5 {
+    font-size: 28px;   /* increase size (adjust if you want bigger) */
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+/* Keep close button at right */
+.custom-header .btn-close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* INFO ITEMS */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.info-item i {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.facebook { background: #3b5998; }
+.twitter { background: #1da1f2; }
+.youtube { background: #ff0000; }
+.instagram { background: #e1306c; }
+
+/* HR */
+hr {
+    margin: 20px 0;
+}
 
 /* Whole footer */
 .footer-section {
