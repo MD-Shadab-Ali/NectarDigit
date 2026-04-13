@@ -5,15 +5,22 @@ body {
     box-sizing: border-box;
     font-family: "IBM Plex Sans Devanagari", serif;
     font-size: 14px;
-    
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
 }
+
+
 
 /* Show dropdown menu on hover */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 5px; /* Optional: removes spacing below parent */
-    
+    margin-top: 5px; /* Optional: removes spacing below parent */    
 }
+
+.navbar-nav .nav-link {
+    color: var(--bs-body-color);
+} 
+
 /* Settings for particles.js */
 .hero-section {
     position: relative;
@@ -35,8 +42,11 @@ body {
     z-index: 2;
 }
 
+
+
+
 /* Hamburger Button */
-.navbar > .btn {
+.navbar .btn {
     background-color: #ff0004;
     line-height: 0;
     border-radius: 100px;
@@ -47,12 +57,12 @@ body {
 }
 
 /* Keep the same style on hover */
-.navbar > .btn:hover {
+.navbar .btn:hover {
     background-color: #ff0004; /* same as normal */
 }
 
 /* Hamburger bars always white */
-.navbar > .btn .navbar-toggler-icon {
+.navbar .btn .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
@@ -212,6 +222,8 @@ hr {
     bottom: -1px;
     z-index: -1;
     pointer-events: none;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -278,7 +290,7 @@ hr {
 .content-wrapper p{
     color: #424242;
     line-height: 25px;
-    /* font-size: 1px; */
+    font-size: 17px;
 }
 
 /* TEXT <p> */
@@ -534,4 +546,116 @@ hr {
     transition-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
-    
+/* =========================
+   FULL DARK MODE OVERRIDE
+   ========================= */
+
+[data-bs-theme="dark"] body {
+    background: #0b0f1a !important;
+    color: #e6e6e6 !important;
+}
+
+/* NAVBAR */
+[data-bs-theme="dark"] .navbar {
+    background-color: #0f172a !important;
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link {
+    color: #e6e6e6 !important;
+}
+
+/* HERO */
+[data-bs-theme="dark"] .hero-section {
+    background: #0b0f1a !important;
+}
+
+[data-bs-theme="dark"] .hero-section h1,
+[data-bs-theme="dark"] .hero-section p {
+    color: #ffffff !important;
+}
+/* DARK MODE */
+[data-bs-theme="dark"] .hero-section:after {
+    background: url(/images/slider8.png) center center / cover no-repeat local;
+}
+
+
+/* WORKED SECTION */
+[data-bs-theme="dark"] .worked-section {
+    background: #0b0f1a !important;
+}
+
+[data-bs-theme="dark"] .content-wrapper p,
+[data-bs-theme="dark"] .content-wrapper h2{
+    color: #d1d5db !important;
+}
+[data-bs-theme="dark"] .worked-section img{
+    z-index: -1;
+}
+
+/* SERVICES */
+[data-bs-theme="dark"] .services-section {
+    background: #0f172a !important;
+}
+
+[data-bs-theme="dark"] .service-card {
+    background: #111827 !important;
+    border-color: #1f2937 !important;
+}
+
+[data-bs-theme="dark"] .service-card p,
+[data-bs-theme="dark"] .service-card h3 {
+    color: #e5e7eb !important;
+}
+
+/* COUNTERS SECTION */
+[data-bs-theme="dark"] .counters-section {
+    background: #0b0f1a !important;
+}
+[data-bs-theme="dark"] .counters-section p,
+[data-bs-theme="dark"] .counters-section h2{
+    color: #e5e7eb !important;
+}
+/* /* COUNTER CARD */
+
+ [data-bs-theme="dark"] .counter-card {
+    background: #0b0f1a !important;
+    color: #e5e7eb !important;
+    border-color: #e5e7eb;
+ }
+ [data-bs-theme="dark"] .counter-card .counter-label,
+ [data-bs-theme="dark"] .counter-card .purecounter{
+    background: #0b0f1a !important;
+    color: #e5e7eb !important;
+ }
+
+/* FOOTER */
+[data-bs-theme="dark"] .footer-section {
+    background: #0f172a !important;
+}
+
+[data-bs-theme="dark"] .footer-section a,
+[data-bs-theme="dark"] .footer-section p {
+    color: #cbd5e1 !important;
+}
+
+/* DROPDOWNS */
+[data-bs-theme="dark"] .dropdown-menu {
+    background: #111827 !important;
+    border-color: #1f2937 !important;
+}
+
+[data-bs-theme="dark"] .dropdown-item {
+    color: #e5e7eb !important;
+}
+
+/* DARK MODE STYLE */
+[data-bs-theme="dark"] #themeToggle {
+    background: #374151;
+    color: #f9fafb;
+}
+
+/* LIGHT MODE STYLE */
+[data-bs-theme="light"] #themeToggle {
+    background: #e5e7eb;
+    color: #111827;
+}    
