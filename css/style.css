@@ -1,3 +1,11 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --primary-color: #ff0004;
+  --secondary-color: rgb(4, 65, 137);
+  --dark-mode: #121212;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     margin: 0;
@@ -9,17 +17,68 @@ body {
     color: var(--bs-body-color);
 }
 
+/* NAV LINK BASE */
+.navbar-nav .nav-link {
+    padding: 6px 22px;
+    border-radius: 30px;
+    color: var(--black-color);
+    transition: 0.3s ease-in-out;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "IBM Plex Sans Devanagari", serif;
+}
 
+/*  Active */
+.navbar-nav .nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+}
+
+/* UNDERLINE EFFECT */
+.navbar-nav .ad-marketing::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary-color);
+    transition: 0.3s ease-in-out;
+}
+
+/* Underline just for Ad Marketing */
+.navbar-nav .ad-marketing:hover::after {
+    width: 100%;
+}
+
+/* remove underline for active */
+.navbar-nav .nav-link.active::after {
+    display: none;
+
+}
+
+/* Hover */
+.navbar-nav .nav-link:hover {
+    color:var(--primary-color) !important;
+    /* background-color: var(--white-color); */
+}
+
+/*  DROPDOWN PARENT ACTIVE */
+.navbar-nav .dropdown.active > .nav-link {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+}
 
 /* Show dropdown menu on hover */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 5px; /* Optional: removes spacing below parent */    
+    margin-top: 5px; /* Optional: removes spacing below parent */ 
+    transition: 0.3s ease-in-out;    
 }
 
-.navbar-nav .nav-link {
-    color: var(--bs-body-color);
-} 
+ 
 
 /* Settings for particles.js */
 .hero-section {
@@ -42,8 +101,35 @@ body {
     z-index: 2;
 }
 
+/* THEME BUTTON (attach with hamburger) */
+.main-btn2 {
+    background: transparent;
+    padding: 6px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: ease-in-out .5s;
+    height: 38px;
+    display: inline-block;
+    font-weight: 600;
+    font-size:  16px;
+    letter-spacing: .3px;
+    
+}
 
+/* attach with hamburger */
+.theme-toggle .main-btn2 {
+    padding: 3px 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
 
+/* hover */
+.main-btn2:hover {
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+}
 
 /* Hamburger Button */
 .navbar .btn {
