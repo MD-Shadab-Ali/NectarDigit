@@ -637,7 +637,7 @@ hr {
     background: #ffffff;
 }
 
-/* icon wrapper style */
+/* Icon wrapper style */
 .counter-icon {
     width: 80px;
     height: 80px;
@@ -667,7 +667,7 @@ hr {
     transition: all 0.25s ease;
 }
 
-/* number styling */
+/* Number styling */
 .counter-number {
     font-size: 3.4rem;
     font-weight: 800;
@@ -694,7 +694,7 @@ hr {
     letter-spacing: 0.5px;
 }
 
-/* optional decorative separator */
+/* Decorative separator */
 .counter-card .divider-light {
     width: 48px;
     height: 3px;
@@ -709,10 +709,7 @@ hr {
     background: #ff0004;
 }
 
-/* AOS custom animation  */
-[data-aos="fade-up"] {
-    transition-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1.1);
-}
+
 
 /* <Section 5> */
 .service-anywhere {
@@ -841,7 +838,6 @@ hr {
     margin-top: 15px;
 }
 
-/* Blog */
 .blog-wrap {
     background: #fff;
     border-radius: 8px;
@@ -924,13 +920,21 @@ hr {
     opacity: 1;
     transform: perspective(0) rotateX(0);
 }
-
 /* End of Blog */
 
 
-/* =========================
-   FULL DARK MODE OVERRIDE
-   ========================= */
+/* <Section 7> */
+.about-section {
+  background: url('/images/about-section.png') center/cover no-repeat;
+}
+
+
+/* End of About CSS  */
+
+
+
+
+/* FULL DARK MODE OVERRIDE */
 
 [data-bs-theme="dark"] body {
     background: #0b0f1a !important;
