@@ -169,12 +169,6 @@ $(document).ready(function() {
 
     // <Section 4>
     // Counter Section
-    // Initialize AOS (Animate on Scroll)
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-    });
     (function() {
         // select all counter spans that have .purecounter class
         const counters = document.querySelectorAll('.purecounter');
@@ -300,4 +294,116 @@ $(document).ready(function() {
         }
     }
   });
+    // About-section
+    function buildGridSlides($slider) {
+
+      if ($slider.data('grid-built')) return;
+
+      const items = $slider.children('.about-section-item');
+      const chunkSize = 8;
+
+      let slides = [];
+
+      for (let i = 0; i < items.length; i += chunkSize) {
+          const chunk = items.slice(i, i + chunkSize);
+
+          const $grid = $('<div class="slide-grid"></div>');
+          chunk.each(function () {
+              $grid.append($(this));
+          });
+
+          slides.push($('<div class="item"></div>').append($grid));
+      }
+
+      $slider.empty().append(slides);
+      $slider.data('grid-built', true);
+    }
+
+
+    function destroySlider($slider) {
+
+      if ($slider.hasClass('owl-loaded')) {
+          $slider.trigger('destroy.owl.carousel');
+          $slider.removeClass('owl-carousel owl-loaded owl-hidden');
+
+          $slider.find('.owl-stage-outer').children().unwrap();
+          $slider.find('.owl-stage').children().unwrap();
+          $slider.find('.owl-item').removeClass('owl-item');
+          $slider.find('.owl-nav, .owl-dots').remove();
+      }
+    }
+
+
+    function initSlider() {
+
+        const $slider = $('#about-product-slider');
+        const isMobile = $(window).width() < 992;
+
+        destroySlider($slider);
+
+        if (isMobile) {
+            $slider.data('grid-built', false);
+
+            $slider.addClass('owl-carousel');
+
+            $slider.owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                smartSpeed: 800,
+                navText: [
+                    '<i class="fas fa-chevron-left"></i>',
+                    '<i class="fas fa-chevron-right"></i>'
+                ]
+            });
+
+        } else {
+
+            buildGridSlides($slider);
+
+            $slider.addClass('owl-carousel');
+
+            $slider.owlCarousel({
+                items: 1,   // IMPORTANT: each slide = grid page
+                loop: true,
+                nav: true,
+                dots: true,
+                smartSpeed: 800,
+                navText: [
+                    '<i class="fas fa-chevron-left"></i>',
+                    '<i class="fas fa-chevron-right"></i>'
+                ]
+            });
+        }
+    }
+
+    $(document).ready(initSlider);
+
+    $(window).on('resize', function () {
+        clearTimeout(window._sliderResize);
+        window._sliderResize = setTimeout(initSlider, 200);
+    });
+    
+    // <Section 8>
+    $(document).on('click', '.accordion-button', function () {
+
+    const $btn = $(this);
+    const $item = $btn.closest('.accordion-item');
+    const $collapse = $item.find('.accordion-collapse');
+
+    const isOpen = $collapse.hasClass('show');
+
+    // close all
+    $('.accordion-collapse').removeClass('show');
+    $('.accordion-button').removeClass('active');
+
+    // open clicked if it was closed
+    if (!isOpen) {
+        $collapse.addClass('show');
+        $btn.addClass('active');
+    }
+});
 });
