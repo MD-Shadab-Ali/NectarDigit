@@ -1288,7 +1288,50 @@ hr {
 }
 
 /* <Section: 10> */
+.client-title {
+  font-size: 50px;
+  line-height: 1.2;
+}
 
+.client-desc {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.star-line {
+  color: #ffb400;
+  font-size: 14px;
+}
+
+.slide-inner {
+    border: 1px solid black;
+  border-radius: 12px;
+}
+
+/* Right Image */
+.client-image img {
+  max-width: 320px;
+}
+
+.rounded-top-pill {
+    border-top-left-radius: 500px !important;
+    border-top-right-radius: 500px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important; 
+}
+
+/* Floating Box Position (IMPORTANT) */
+.client-rating {
+  bottom: 140px;
+  left: -30px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .client-rating {
+    left: 10px;
+  }
+}
 
 /* FULL DARK MODE OVERRIDE */
 
@@ -1422,6 +1465,20 @@ hr {
 }
 [data-bs-theme="dark"] .about-section-item span:hover {
     color: #ff0004 !important;
+}
+
+/* Feedback section */
+[data-bs-theme="dark"] .client-zone {
+    background-color: #0b0f1a !important;
+}
+
+[data-bs-theme="dark"] .client-title {
+    color: #e5e7eb !important;
+}
+
+[data-bs-theme="dark"] .slide-inner {
+    background-color: #0b0f1a !important;
+
 }
 
 /* FAQ Section */

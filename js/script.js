@@ -406,4 +406,13 @@ $(document).ready(function() {
         $btn.addClass('active');
     }
 });
+  $('#client-slider').owlCarousel({
+    loop: true,
+    margin: 20,
+    items: 1,
+    dots: true,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000
+  });
 });
