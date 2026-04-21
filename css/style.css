@@ -1289,28 +1289,44 @@ hr {
 
 /* <Section: 10> */
 .client-title {
-  font-size: 50px;
-  line-height: 1.2;
+    font-size: 50px;
+    line-height: 1.2;
 }
 
 .client-desc {
-  font-size: 20px;
-  line-height: 25px;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 .star-line {
-  color: #ffb400;
-  font-size: 14px;
+    color: #ffb400;
+    font-size: 19px;
 }
 
 .slide-inner {
-    border: 1px solid black;
-  border-radius: 12px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    border-radius: 12px;
 }
+
+.client-zone .testi-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+}
+
+.user-info {
+    gap: 20px;
+}
+
+.slide-box {
+    padding: 12px;
+}
+
+
 
 /* Right Image */
 .client-image img {
-  max-width: 320px;
+    max-width: 320px;
 }
 
 .rounded-top-pill {
@@ -1322,15 +1338,57 @@ hr {
 
 /* Floating Box Position (IMPORTANT) */
 .client-rating {
-  bottom: 140px;
-  left: -30px;
+    bottom: 30px;
+    left: -50px;
+    background-color: #00aa4b;
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5); 
+}
+
+.company-logo-free {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.client-rating .company-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+}
+
+.client-rating img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.client-rating .google-rating-item .company-rating {
+    padding: 40px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.g-rating {
+    color: #ffd504;
+    font-size: 19px;
 }
 
 /* Responsive */
 @media (max-width: 991px) {
-  .client-rating {
-    left: 10px;
-  }
+    .client-rating {
+        left: 10px;
+    }
 }
 
 /* FULL DARK MODE OVERRIDE */
@@ -1496,6 +1554,19 @@ hr {
 }
 [data-bs-theme="dark"] .award-chip span {
     color: #0b0f1a !important;
+}
+
+/*  Client Zone  */
+[data-bs-theme="dark"] .client-zone p {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .client-zone h2 {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .slide-inner {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 /* FOOTER */

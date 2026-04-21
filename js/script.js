@@ -390,11 +390,11 @@ $(document).ready(function() {
     // <Section 8>
     $(document).on('click', '.accordion-button', function () {
 
-    const $btn = $(this);
-    const $item = $btn.closest('.accordion-item');
-    const $collapse = $item.find('.accordion-collapse');
+        const $btn = $(this);
+        const $item = $btn.closest('.accordion-item');
+        const $collapse = $item.find('.accordion-collapse');
 
-    const isOpen = $collapse.hasClass('show');
+        const isOpen = $collapse.hasClass('show');
 
     // close all
     $('.accordion-collapse').removeClass('show');
@@ -406,13 +406,14 @@ $(document).ready(function() {
         $btn.addClass('active');
     }
 });
-  $('#client-slider').owlCarousel({
-    loop: true,
-    margin: 20,
-    items: 1,
-    dots: true,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 3000
-  });
+    // <Section 10>
+    $('#client-slider').owlCarousel({
+      loop: true,
+      margin: 20,
+      items: 1,
+      dots: false,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 3000
+    });
 });
