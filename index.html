@@ -34,6 +34,9 @@
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Type-Writer -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -44,123 +47,111 @@
 
 <body>
     <header class="sticky-top">
-        <div class="navbar navbar-expand-sm bg-body border-bottom" aria-label="Primary Navigation">
-            <div class="container d-flex align-items-center">
-                
-                <!-- Left side content -->
-                <!-- Logo + Navbar links wrapper -->
-                <div class="d-flex align-items-center">
+    <div class="navbar navbar-expand-sm bg-body border-bottom" aria-label="Primary Navigation">
+        
+        <div class="container d-flex align-items-center justify-content-between">
 
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="#">
-                        <img src="/images/site-logo.png" alt="Nectar Digit logo" height="50">
+            <!-- Logo (LEFT) -->
+            <a class="navbar-brand" href="#">
+                <img src="/images/site-logo.png" alt="Nectar Digit logo" height="50">
+            </a>
+
+            <!-- CENTER NAV -->
+            <ul class="navbar-nav d-flex flex-row mx-auto">
+                <li class="nav-item me-3"><a class="nav-link" href="index.html"><b>Home</b></a></li>
+                <li class="nav-item me-3"><a class="nav-link" href="about.html"><b>About</b></a></li>
+                <li class="nav-item me-3"><a class="nav-link" href="services.html"><b>Services</b></a></li>
+                <li class="nav-item me-3"><a class="nav-link" href="portfolio.html"><b>Portfolio</b></a></li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ad-marketing" href="#" role="button" data-bs-toggle="dropdown">
+                        <b>AD Marketing</b>
                     </a>
-                    
-
-                    <!-- Navbar links -->
-                    <ul class="navbar-nav d-flex flex-row">
-                        <li class="nav-item me-3"><a class="nav-link" href="index.html"><b>Home</b></a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="about.html"><b>About</b></a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="services.html"><b>Services</b></a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="portfolio.html"><b>Portfolio</b></a></li>
-
-                        <!-- Dropdown Menu -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle ad-marketing" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b>AD Marketing</b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="facebook-ad.html"><b>Facebook Ad Marketing</b></a></li><li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="instagram-ad.html"><b>Instagram Ad Marketing</b></a></li><li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="google-adwords.html"><b>Google Adwords</b></a></li><li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="google-ad-.html"><b>Google Ad Marketing</b></a></li>
-                            </ul>
-                        </li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="facebook-ad.html"><b>Facebook Ad Marketing</b></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="instagram-ad.html"><b>Instagram Ad Marketing</b></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="google-adwords.html"><b>Google Adwords</b></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="google-ad-.html"><b>Google Ad Marketing</b></a></li>
                     </ul>
-                </div>
-                
-                <!-- Theme + Hamburger wrapper -->
-                <div class="theme-toggle d-flex align-items-center gap-2 ms-auto">
-                    <!-- Dark Button -->
-                    <button id="dark-mode" class="main-btn2">
-                        <i class="fa fa-circle-half-stroke"></i>
-                    </button>
+                </li>
+            </ul>
 
-                    <!-- Light Button -->
-                    <button id="light-mode" class="main-btn2" style="display:none;">
-                        <i class="fa fa-moon"></i>
-                    </button>
-
-                    <!-- Hamburger -->
-                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+            <!-- RIGHT SIDE (Theme + Hamburger) -->
+            <div class="theme-toggle d-flex align-items-center gap-2">
                 
+                <!-- Dark Button -->
+                <button id="dark-mode" class="main-btn2">
+                    <i class="fa fa-circle-half-stroke"></i>
+                </button>
+
+                <!-- Light Button -->
+                <button id="light-mode" class="main-btn2" style="display:none;">
+                    <i class="fa fa-moon"></i>
+                </button>
+
+                <!-- Hamburger -->
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
             </div>
-            
-            
-                
+
         </div>
+    </div>
+
+    <!-- OFFCANVAS (UNCHANGED) -->
+    <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasRight">
         
-        <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasRight">
-            <!-- HEADER -->
-            <div class="offcanvas-header custom-header">
-                <h5 class="mb-0 text-white fw-bold">Contact Information</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-            </div>
-
-            <!-- BODY -->
-            <div class="offcanvas-body text-left" style="gap: 15px">
-
-                <!-- LOGO -->
-                <img src="/images/site-logo.png" class="img-fluid mb-3" width="250">
-
-                <hr>
-
-                <!-- ADDRESS -->
-                <div class="info-item">
-                    <i class="fas fa-map text-danger"></i>
-                    <span><b>Sundhara, Kathmandu, Nepal</b></span>
-                </div>
-
-                <!-- PHONE -->
-                <div class="info-item">
-                    <i class="fas fa-phone text-danger"></i>
-                    <div>
-                        <div><b>9807555929</b></div>
-                        <div><b>+447727742565 / +12029924159</b></div>
-                    </div>
-                </div>
-
-                <!-- EMAIL -->
-                <div class="info-item">
-                    <i class="fas fa-paper-plane text-danger"></i>
-                    <span><b>info@nectardigit.com</b></span>
-                </div>
-
-                <!-- WEBSITE -->
-                <div class="info-item">
-                    <i class="fas fa-globe text-danger"></i>
-                    <span><b>https://www.nectardigit.com</b></span>
-                </div>
-
-                <!-- SOCIAL -->
-                <h4 class="mt-4 fw-bold"><b>Follow Us On:</b></h4>
-
-                <div class="social-icons mt-3">
-                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-
-            </div>
+        <div class="offcanvas-header custom-header">
+            <h5 class="mb-0 text-white fw-bold">Contact Information</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
-            
-        
-        
-    </header>    
+
+        <div class="offcanvas-body text-left" style="gap: 15px">
+
+            <img src="/images/site-logo.png" class="img-fluid mb-3" width="250">
+
+            <hr>
+
+            <div class="info-item">
+                <i class="fas fa-map text-danger"></i>
+                <span><b>Sundhara, Kathmandu, Nepal</b></span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone text-danger"></i>
+                <div>
+                    <div><b>9807555929</b></div>
+                    <div><b>+447727742565 / +12029924159</b></div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-paper-plane text-danger"></i>
+                <span><b>info@nectardigit.com</b></span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-globe text-danger"></i>
+                <span><b>https://www.nectardigit.com</b></span>
+            </div>
+
+            <h4 class="mt-4 fw-bold"><b>Follow Us On:</b></h4>
+
+            <div class="social-icons mt-3">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+
+        </div>
+    </div>
+</header>    
     
     
 
@@ -173,7 +164,10 @@
 
                     <!-- LEFT CONTENT -->
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h1 class="fw-bold">Lets Grow Together and Be Success</h1>
+                        <h1 class="fw-bold">
+                            Lets Grow Together and Be Success<br>
+                            <span class="typewriter"></span>
+                        </h1>
                         <p>
                             Nectar Digit is a leading IT agency dedicated to empowering businesses through the strategic implementation of technology. We are passionate about helping our clients achieve their goals.
 

@@ -128,12 +128,31 @@ $(document).ready(function() {
     },
     retina_detect: true
   });
+    
+    //     TYPEWRITER EFFECT
+    if ($(".typewriter").length) {
+        new Typed(".typewriter", {
+            strings: [
+                "Nectar Digit",
+                "Digital Growth Partner",
+                "Think Digital Be Digital"
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            startDelay: 500,
+            backDelay: 2000,
+            smartBackspace: true,
+            loop: true,
+            showCursor: false,
+            cursorChar: "|"
+        });
+    }
 
     // <Section 2>
     // LOGO CAROUSEL (We Have Worked)
     $('.logo-carousel').owlCarousel({
         loop: true,
-        margin: 20,
+        margin: 40,
         autoplay: true,
         autoplayTimeout: 2000,
         smartSpeed: 600,
@@ -142,8 +161,9 @@ $(document).ready(function() {
         responsive: {
             0: { items: 2 },
             576: { items: 3 },
-            768: { items: 5 },
-            992: { items: 6 }
+            768: { items: 4 },
+            992: { items: 5 },
+            1200: { items:5 }
         }
     });
 
@@ -416,4 +436,5 @@ $(document).ready(function() {
       autoplay: true,
       autoplayTimeout: 3000
     });
+    
 });
