@@ -161,8 +161,8 @@ $(document).ready(function() {
         responsive: {
             0: { items: 2 },
             576: { items: 3 },
-            768: { items: 4 },
-            992: { items: 5 },
+            768: { items: 3 },
+            992: { items: 4 },
             1200: { items:5 }
         }
     });
@@ -436,5 +436,34 @@ $(document).ready(function() {
       autoplay: true,
       autoplayTimeout: 3000
     });
+    // Footer-Bottom
+    const moveTop = document.querySelector(".move-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+            moveTop.classList.add("active");
+        } else {
+            moveTop.classList.remove("active");
+        }
+    });
+
+    moveTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    $("#top-header-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 600,
+    dots: false,
+    nav: false,
+    mouseDrag: false,
+    touchDrag: false
+});
     
 });

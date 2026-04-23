@@ -94,8 +94,53 @@ p {
 
 /* End of Global CSS */
 
+/* Top Header */
+/* Left-Side */
+.top-header {
+    background: rgb(4, 65, 137);
+    border-bottom: 1px solid rgba(2, 45, 98, 0.1);
+}
 
-/* NAV LINK BASE */
+.quote-line {
+    width: 60%;
+}
+
+.quote-line .item {
+    color: var(--white-color);
+    font-size: 15px;
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    position: relative;
+}
+
+/* Right-Side */
+#top-header-slider .item {
+    white-space: nowrap;
+}
+
+.top-header-links ul li {
+    padding-block: 10px;
+}
+
+.top-header-links a {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.top-header-links ul li a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: #fff !important;
+    text-decoration-thickness: 1px;
+}
+
+.top-header-links ul li:not(:last-child)::after {
+    content: "|";
+    margin-left: 12px;
+    color: #fff;
+}
+
+/* Header*/
 .navbar-nav .nav-link {
     padding: 6px 22px;
     border-radius: 30px;
@@ -163,7 +208,7 @@ p {
 /* Show dropdown menu on hover */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 5px; /* Optional: removes spacing below parent */ 
+    margin-top: 5px; 
     transition: 0.3s ease-in-out;    
 }
 
@@ -210,7 +255,7 @@ p {
 
 /* Keep the same style on hover */
 .navbar .btn:hover {
-    background-color: #ff0004; /* same as normal */
+    background-color: #ff0004; 
 }
 
 /* Hamburger bars always white */
@@ -230,13 +275,13 @@ p {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* centers horizontally */
+    justify-content: center; 
     position: relative;
     
 }
 /* Center + Bigger Heading */
 .custom-header h5 {
-    font-size: 28px;   /* increase size (adjust if you want bigger) */
+    font-size: 28px;   
     text-align: left;
     width: 100%;
     margin: 0;
@@ -312,7 +357,7 @@ hr {
 
 /* Whole footer */
 .footer-section {
-    background-color: rgb(4, 65, 137); /* dark blue like original */
+    background-color: rgb(4, 65, 137); 
 }
 
 .footer-section h3 {
@@ -367,6 +412,72 @@ hr {
     background-color: rgb(4, 65, 137);
 }
 
+/* Footer-bottom */
+.footer-bottom {
+    background: var(--primary-color);
+    padding: 18px 0px;
+}
+
+.footer-bottom ul li {
+    color: var(--white-color);
+}
+
+/* Scroll-Top */
+.move-top {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.move-top.active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 30px;
+}
+
+.pulse {
+    height: 40px;
+    width: 40px;
+    line-height: 38px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 100%;
+    font-size: 16px;
+    z-index: 0;
+}
+
+.pulse:after {
+    content: "";
+    height: 60px;
+    left: -11px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 60px;
+    line-height: 60px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    z-index: -1;
+    animation: 0.8s linear 0s infinite normal none running ripple-white3;
+    background: var(--primary-color) 4a;
+    border-radius: 100%;
+    margin: auto;
+}
+@keyframes ripple-white3 {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
 
 /* <Section 1> */
 .hero-section {
@@ -381,7 +492,7 @@ hr {
     align-items: flex-start;
 }
 
-/* Move slider down (guaranteed working) */
+/* Move slider down */
 .hero-slider {
     transform: translateY(120px);
 }
@@ -423,7 +534,7 @@ hr {
 }
 
 .typewriter {
-    color: #ffc107; /* yellow highlight like your site */
+    color: #ffc107; 
     font-weight: bold;
     display: inline-block;
 }
@@ -433,11 +544,11 @@ hr {
 .worked-section {
     position: relative;
     display: flex;
-    justify-content: center; /* centers content horizontally */
-    align-items: center;     /* centers content vertically */
-    height: 700px;           /* adjust as needed */
+    justify-content: center; 
+    align-items: center;     
+    height: 850px;           
     overflow: hidden;
-    background: #fff;        /* fallback background */
+    background: #fff;        
 }
 
 /* SIDE IMAGES */
@@ -445,7 +556,7 @@ hr {
     position: absolute;
     top: 0;
     height: 100%;
-    width: 30%;        /* leaves space for center content */
+    width: 15%;        
     object-fit: cover;
     opacity: 1;
     z-index: 0;
@@ -464,7 +575,8 @@ hr {
 .content-wrapper {
     position: relative;
     z-index: 2;
-    width: 50%;         /* ensures content stays between images */
+    width: 70%;   
+    overflow: hidden;
 }
 
 .content-wrapper p{
@@ -482,27 +594,32 @@ hr {
 
 /* LOGOS */
 .logo-carousel {
-    overflow-x: auto;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
     scroll-behavior: smooth;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 .logo-carousel .item {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95px;
+    width: 180px;
+    padding: 15px;
     
 
 }
 
 .logo-carousel img {
-    max-height: 70px;
+    max-height: 150px;
+    width: auto;
     filter: grayscale(0%);
     transition: 0.3s;
+    object-fit: contain;
+    
 }
 
 .logo-carousel img:hover {
-    margin-bottom: 20px;
     transform: scale(1.05);
 
 }
@@ -1134,9 +1251,8 @@ hr {
     display: none !important;
 }
 .accordion-button:not(.collapsed) {
-    background-color: #f8f8fb !important;  /* Your original background */
-    /* color: #000 !important;  Keep text black */
-    box-shadow: none !important;  /* Remove any blue shadow */
+    background-color: #f8f8fb !important;  
+    box-shadow: none !important;  
 }
 .accordion-button:focus {
     box-shadow: none !important;
@@ -1477,9 +1593,14 @@ hr {
     color: #e6e6e6 !important;
 }
 
+/* Top-Header */
+[data-bs-theme="dark"] .top-header {
+    background: #0b0f1a !important;
+}
+
 /* Navbar */
 [data-bs-theme="dark"] .navbar {
-    background-color: #0f172a !important;
+    background-color: #0b0f1a !important;
 }
 
 [data-bs-theme="dark"] .navbar-nav .nav-link {
@@ -1680,8 +1801,4 @@ hr {
 [data-bs-theme="dark"] .footer-section p {
     color: #cbd5e1 !important;
 }
-
-
-
-    
 
