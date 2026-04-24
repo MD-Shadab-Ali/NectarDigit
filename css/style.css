@@ -1638,10 +1638,23 @@ hr {
     color: #e6e6e6 !important;
 }
 
+[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link.active:hover {
+    color: var(--white-color) !important;
+    background-color: var(--primary-color) !important;
+}
+
 /* Dropdowns */
 [data-bs-theme="dark"] .dropdown-menu {
     background: #111827 !important;
     border-color: #1f2937 !important;
+}
+
+[data-bs-theme="dark"] .navbar-nav .ad-marketing::after {
+    color: var(--primary-color);
 }
 
 [data-bs-theme="dark"] .dropdown-item {
