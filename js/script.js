@@ -1,5 +1,17 @@
 // Initialize Owl Carousel for the hero slider
 $(document).ready(function() {
+    $("#top-header-slider").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        smartSpeed: 600,
+        dots: false,
+        nav: false,
+        mouseDrag: false,
+        touchDrag: false
+    });
+
     $('.hero-slider').owlCarousel({
         loop: true,
         margin: 15,
@@ -18,116 +30,118 @@ $(document).ready(function() {
 
     // <Section 1>
     // Particles
-    particlesJS("particles-js", {
-    particles: {
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      color: {
-        value: "#ffffff"
-      },
-      shape: {
-        type: "circle",
-        stroke: {
-          width: 0,
-          color: "#000000"
-        },
-        polygon: {
-          nb_sides: 5
-        },
-        image: {
-          src: "img/github.svg",
-          width: 100,
-          height: 100
-        }
-      },
-      opacity: {
-        value: 0.5,
-        random: false,
-        anim: {
-          enable: false,
-          speed: 1,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 3,
-        random: true,
-        anim: {
-          enable: false,
-          speed: 40,
-          size_min: 0.1,
-          sync: false
-        }
-      },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 5,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 1200
-        }
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"
-        },
-        onclick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
-      },
-      modes: {
-        grab: {
-          distance: 400,
-          line_linked: {
-            opacity: 1
-          }
-        },
-        bubble: {
-          distance: 400,
-          size: 40,
-          duration: 2,
-          opacity: 8,
-          speed: 3
-        },
-        repulse: {
-          distance: 200,
-          duration: 0.4
-        },
-        push: {
-          particles_nb: 4
-        },
-        remove: {
-          particles_nb: 2
-        }
-      }
-    },
-    retina_detect: true
-  });
+    if (document.getElementById("particles-js")) {
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 100,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                stroke: {
+                    width: 0,
+                    color: "#000000"
+                },
+                polygon: {
+                    nb_sides: 5
+                },
+                image: {
+                    src: "img/github.svg",
+                    width: 100,
+                    height: 100
+                }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                anim: {
+                    enable: false,
+                    speed: 40,
+                    size_min: 0.1,
+                    sync: false
+                }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 5,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                onclick: {
+                    enable: true,
+                    mode: "push"
+                },
+                resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                line_linked: {
+                opacity: 1
+                }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4
+                },
+                push: {
+                    particles_nb: 4
+                },
+                remove: {
+                    particles_nb: 2
+                }
+                }
+            },
+            retina_detect: true
+        });
+    }    
     
     //     TYPEWRITER EFFECT
     if ($(".typewriter").length) {
@@ -302,55 +316,56 @@ $(document).ready(function() {
     const currentPage = window.location.pathname.split("/").pop();
 
     document.querySelectorAll(".navbar-nav .nav-link, .dropdown-item").forEach(link => {
-      const linkPage = link.getAttribute("href");
+    const linkPage = link.getAttribute("href");
 
-      if (linkPage === currentPage) {
+    if (linkPage === currentPage) {
         link.classList.add("active");
 
-        // If inside dropdown → activate parent
-        const parentDropdown = link.closest(".dropdown");
-        if (parentDropdown) {
-            parentDropdown.classList.add("active");
+    // If inside dropdown → activate parent
+    const parentDropdown = link.closest(".dropdown");
+    if (parentDropdown) {
+        parentDropdown.classList.add("active");
         }
     }
-  });
+    });
+
     // About-section
     function buildGridSlides($slider) {
 
-      if ($slider.data('grid-built')) return;
+        if ($slider.data('grid-built')) return;
 
-      const items = $slider.children('.about-section-item');
-      const chunkSize = 8;
+            const items = $slider.children('.about-section-item');
+            const chunkSize = 8;
 
-      let slides = [];
+        let slides = [];
 
-      for (let i = 0; i < items.length; i += chunkSize) {
-          const chunk = items.slice(i, i + chunkSize);
+        for (let i = 0; i < items.length; i += chunkSize) {
+            const chunk = items.slice(i, i + chunkSize);
 
-          const $grid = $('<div class="slide-grid"></div>');
-          chunk.each(function () {
-              $grid.append($(this));
-          });
+            const $grid = $('<div class="slide-grid"></div>');
+            chunk.each(function () {
+                $grid.append($(this));
+            });
 
-          slides.push($('<div class="item"></div>').append($grid));
-      }
+            slides.push($('<div class="item"></div>').append($grid));
+        }
 
-      $slider.empty().append(slides);
-      $slider.data('grid-built', true);
+    $slider.empty().append(slides);
+    $slider.data('grid-built', true);
     }
 
 
     function destroySlider($slider) {
 
-      if ($slider.hasClass('owl-loaded')) {
-          $slider.trigger('destroy.owl.carousel');
-          $slider.removeClass('owl-carousel owl-loaded owl-hidden');
+    if ($slider.hasClass('owl-loaded')) {
+        $slider.trigger('destroy.owl.carousel');
+        $slider.removeClass('owl-carousel owl-loaded owl-hidden');
 
-          $slider.find('.owl-stage-outer').children().unwrap();
-          $slider.find('.owl-stage').children().unwrap();
-          $slider.find('.owl-item').removeClass('owl-item');
-          $slider.find('.owl-nav, .owl-dots').remove();
-      }
+        $slider.find('.owl-stage-outer').children().unwrap();
+        $slider.find('.owl-stage').children().unwrap();
+        $slider.find('.owl-item').removeClass('owl-item');
+        $slider.find('.owl-nav, .owl-dots').remove();
+    }
     }
 
 
@@ -420,23 +435,25 @@ $(document).ready(function() {
     $('.accordion-collapse').removeClass('show');
     $('.accordion-button').removeClass('active');
 
-    // open clicked if it was closed
-    if (!isOpen) {
-        $collapse.addClass('show');
-        $btn.addClass('active');
-    }
-});
+        // open clicked if it was closed
+        if (!isOpen) {
+            $collapse.addClass('show');
+            $btn.addClass('active');
+        }
+    });
+
     // <Section 10>
     $('#client-slider').owlCarousel({
-      loop: true,
-      margin: 20,
-      items: 1,
-      dots: false,
-      nav: false,
-      autoplay: true,
-      autoplayTimeout: 3000
+    loop: true,
+    margin: 20,
+    items: 1,
+    dots: false,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000
     });
-    // Footer-Bottom
+
+    // Footer-Bottom-Move-Top
     const moveTop = document.querySelector(".move-top");
 
     window.addEventListener("scroll", () => {
@@ -454,16 +471,6 @@ $(document).ready(function() {
         });
     });
 
-    $("#top-header-slider").owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    smartSpeed: 600,
-    dots: false,
-    nav: false,
-    mouseDrag: false,
-    touchDrag: false
-});
+    
     
 });
