@@ -4,7 +4,7 @@
   --white-color1: #f8f8fb;
   --black-color: #000;
   --primary-color: #ff0004;
-  --secondary-color: rgb(4, 65, 137);
+  --secondary-color1: rgb(4, 65, 137);
   --dark-mode: #121212;
 }
 
@@ -1615,6 +1615,88 @@ hr {
   .contact-box:last-child {
     border-bottom: none;
   }
+}
+
+/* About-Page */
+.about-page-section {
+    background-size: "cover";
+    background-position: "center";
+}
+
+.about-page-section-wrap nav .breadcrumb {
+    background: rgb(27 81 131 / 66%);
+}
+
+.about-page-section-wrap nav .breadcrumb li {
+    font-size: 18px;
+}
+
+.about-page-section-wrap nav .breadcrumb li a {
+    color: var(--primary-color);
+}
+
+.about-page-section-wrap nav .breadcrumb li a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: var(--primary-color) !important;
+    text-decoration-thickness: 1px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    float: left;
+    padding-right: 0.5rem;
+    color: white;
+    content: "/";
+}
+
+/* Spinner */
+.about-us:before {
+    position: absolute;
+    content: "";
+    background-image: url(/images/about-page-1.png);
+    height: 260px;
+    width: 260px;
+    top: 10%;
+    right: 10%;
+    background-size: contain;
+    animation-name: spinInfinit;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: -1;
+}
+
+@keyframes spinInfinit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about-us-content h2 {
+    font-size: 40px;
+    line-height: 43px;
+}
+
+.about-us-content h2:before {
+    content: "";
+    background: linear-gradient(45deg, var(--secondary-color1), #56aee3) !important;
+    position: absolute;
+    height: 10px;
+    width: 72px;
+    bottom: -20px;
+    left: 0;
+}
+
+.about-us-content h2:after {
+    background: #ffffff;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 30px;
+    bottom: -16px;
+    left: 0px;
 }
 
 /* FULL DARK MODE OVERRIDE */
