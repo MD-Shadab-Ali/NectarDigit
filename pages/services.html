@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/service-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+
+    <!-- jQuery (required by Owl Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Bootstrap JS Bundle (Popper included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+    
+</head>
+
+<body>
+    <header class="sticky-top">
+        <div class="top-header shadow-none">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <!-- LEFT: SLIDER -->
+                <div class="quote-line">
+                    <div id="top-header-slider" class="owl-carousel owl-theme">
+
+                        <div class="item text-white">
+                            Innovation is the heartbeat of every successful IT company
+                            <i class="fa fa-arrow-right-long"></i>
+                        </div>
+
+                        <div class="item text-white">
+                            IT companies turn complex problems into seamless solutions
+                            <i class="fa fa-arrow-right-long"></i>
+                        </div>
+
+                        <div class="item text-white">
+                            In the digital age, IT companies are the architects of progress
+                            <i class="fa fa-arrow-right-long"></i>
+                        </div>
+
+                        <div class="item text-white">
+                            An IT company’s success is built on adaptability and vision
+                            <i class="fa fa-arrow-right-long"></i>
+                        </div>
+
+                        <div class="item text-white">
+                            Technology is the tool; IT companies are the creators of tomorrow
+                            <i class="fa fa-arrow-right-long"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT: LINKS -->
+                <div class="top-header-links">
+                    <ul class="d-flex flex-wrap gap-12">
+                        <li>
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Docs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Get Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="navbar navbar-expand-sm bg-body border-bottom" aria-label="Primary Navigation">
+            
+            <div class="container d-flex align-items-center justify-content-between">
+
+                <!-- Logo (LEFT) -->
+                <a class="navbar-brand" href="#">
+                    <img src="/images/site-logo.png" alt="Nectar Digit logo" height="50">
+                </a>
+
+                <!-- CENTER NAV -->
+                <ul class="navbar-nav d-flex flex-row mx-auto">
+                    <li class="nav-item me-3"><a class="nav-link" href="/index.html"><b>Home</b></a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="about.html"><b>About</b></a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="services.html"><b>Services</b></a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="portfolio.html"><b>Portfolio</b></a></li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle ad-marketing" href="#" role="button" data-bs-toggle="dropdown">
+                            <b>AD Marketing</b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="facebook-ad.html"><b>Facebook Ad Marketing</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="instagram-ad.html"><b>Instagram Ad Marketing</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="google-adwords.html"><b>Google Adwords</b></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="google-ad-.html"><b>Google Ad Marketing</b></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- RIGHT SIDE (Theme + Hamburger) -->
+                <div class="theme-toggle d-flex align-items-center gap-2">
+                    
+                    <!-- Dark Button -->
+                    <button id="dark-mode" class="main-btn2">
+                        <i class="fa fa-circle-half-stroke"></i>
+                    </button>
+
+                    <!-- Light Button -->
+                    <button id="light-mode" class="main-btn2" style="display:none;">
+                        <i class="fa fa-moon"></i>
+                    </button>
+
+                    <!-- Hamburger -->
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- OFFCANVAS (UNCHANGED) -->
+        <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasRight">
+            
+            <div class="offcanvas-header custom-header">
+                <h5 class="mb-0 text-white fw-bold">Contact Information</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body text-left" style="gap: 15px">
+
+                <img src="/images/site-logo.png" class="img-fluid mb-3" width="250">
+
+                <hr>
+
+                <div class="info-item">
+                    <i class="fas fa-map text-danger"></i>
+                    <span><b>Sundhara, Kathmandu, Nepal</b></span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone text-danger"></i>
+                    <div>
+                        <div><b>9807555929</b></div>
+                        <div><b>+447727742565 / +12029924159</b></div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-paper-plane text-danger"></i>
+                    <span><b>info@nectardigit.com</b></span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-globe text-danger"></i>
+                    <span><b>https://www.nectardigit.com</b></span>
+                </div>
+
+                <h4 class="mt-4 fw-bold"><b>Follow Us On:</b></h4>
+
+                <div class="social-icons mt-3">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Image Section -->
+        <section class="about-page-section bg-no-repeat" style="background-image: url(/images/services-page.png);">
+            <div class="container">
+                <div class="about-page-section-wrap d-flex align-items-center justify-content-center flex-column position-relative" style="height: 198px;">
+                    <nav aria-label="breadcrumb" class="position-absolute bottom-0">
+                        <ol class="breadcrumb m-0 py-3 px-4">
+                            <li class="breadcrumb-item text-white fw-medium">
+                                <a href="/index.html" title="Home">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active text-white fw-medium" aria-current="page">
+                                Services
+                            </li> 
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <div class="service-page mt">
+            <div class="container">
+                <div class="main-title">
+                    <h2></h2>
+                    <p></p>
+                    <span class="title-pattern">
+                        <i class="fa fa-bar-chart"></i>
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide4.png" alt="Web Design &amp; Development">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Web Design & Development</h3>
+                                <p style="text-align: center;">
+                                    Cross-browser and cross-device compatibility driven by mobile responsiveness all under one roof. Starting from basic website designs, including CMS...
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide5.png" alt="Mobile App. Development">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Mobile App. Development</h3>
+                                <p style="text-align: center;">
+                                    Creating seamless and intuitive mobile applications that offer the best user experience is what our team of mobile app development professionals at Ne...
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide6.png" alt="Digital Martketing">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Digital Martketing</h3>
+                                <p style="text-align: center;">
+                                    Digital marketing comprises of a number of activities for the web apart from marketing and each and every activity needs to be executed with focus on...
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide7.png" alt="Digital Martketing">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Branding & Identity</h3>
+                                <p style="text-align: center;">
+                                    Your brand is the message your business is trying to communicate with your people. It is imperative that you devise a perfect brand identity that will...
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide8.png" alt="Software Development">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Software Development</h3>
+                                <p style="text-align: center;">
+                                    We build enterprise-grade custom software solutions that enable businesses to unlock innovation and leverage digital transformation. We work from conc...
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide9.png" alt="IT Consultancy">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">IT Consultancy</h3>
+                                <p style="text-align: center;">
+                                    The primary aim of consultancy services is taking the business to the next level by optimizing analytics, processes, and workflows with specialized so... 
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide10.png" alt="System Administration">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">System Administration</h3>
+                                <p style="text-align: center;">
+                                    Everyone wants perfect function of their system, we offer you the best way regarding the security and super performance of Monitoring the system healt... 
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide11.png" alt=" Web &amp; Email Hosting">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Web & Email Hosting</h3>
+                                <p style="text-align: center;">
+                                    A hosting account is like leasing a space in that 
+                                    shopping center where you can set up shop. Nectar
+                                    Digit let you lease space on our web serve...
+                                </p>
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide12.png" alt="eCommerce Solutions">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">eCommerce Solutions</h3>
+                                <p style="text-align: center;">
+                                    Ecommerce is an umbrella term for selling and buying 
+                                    online. On this customer-centric market, competitive 
+                                    strengths are built around cus...
+                                </p>   
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide13.png" alt="Domain Registration">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Domain Registration</h3>
+                                <p style="text-align: center;">
+                                    Your domain name is what people type into their 
+                                    browser to find your website. Still, the website's 
+                                    address is really a unique stri...
+                                </p>   
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide14.png" alt="Cyber Security & Enterprise Risk">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Cyber Security & Enterprise Risk</h3>
+                                <p style="text-align: center;">
+                                    The threats of cyber-attacks are a fact of life and a 
+                                    fact of business - and your customers know it. Nectar 
+                                    Digit’s Cybersecurity...
+                                </p>   
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-wrap text-center hvr-buzz-out">
+                            <div class="service-icon overflow-hidden">
+                                <img class="w-100 h-100" style="object-fit: cover;" src="/images/slide15.png" alt="Open-Source Customization">
+                            </div>
+                            <div class="service-content">
+                                <h3 class="text-black">Open-Source Customization</h3>
+                                <p style="text-align: center;">
+                                    The solutions that are built around your requirement. 
+                                    Through our foolproof methodology, we will use the 
+                                    right open-source technology to...
+                                </p>   
+                                <a href="#" class="btn btn-danger px-4">
+                                    Learn More  <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter  -->
+        <section class="contact-strip" style= "position: relative">
+            <div class="contact-wrapper">
+                <div class="contact-row d-flex justify-content-center flex-wrap">
+
+                    <!-- USA -->
+                    <div class="contact-box d-flex py-4 align-items-center justify-content-start">
+                        <img src="/images/USA.png" alt="USA Flag" class="flag-icon">
+                        <div class="contact-text ">
+                        <p><b>12668 Pronghorn St<br>Broomfield, CO 80020, USA</b></p>
+                        <p><a href="#" class="text-decoration-none text-black reach"><i class="fa fa-phone mr-1"></i> <b>+12029924159</b></a></p>
+                        <p><a href="#" class="text-decoration-none text-black reach"><i class="fa fa-envelope mr-1"></i> <b>info@nectardigit.com</b></a></p>
+                        </div>
+                    </div>
+
+                    <!-- UK -->
+                    <div class="contact-box d-flex py-4 align-items-center justify-content-start">
+                        <img src="/images/UK.jpg" alt="UK Flag" class="flag-icon">
+                        <div class="contact-text">
+                        <p><b>Unit 82A James Carter Road,<br>Mildenhall, Bury St.</b></p>
+                        <p><a href="#" class="text-decoration-none text-black reach"><i class="fa fa-phone mr-1"></i> <b>+447727742565</b></a></p>
+                        <p><a href="#" class="text-decoration-none text-black reach"><i class="fa fa-envelope mr-1"></i> <b>info@nectardigit.com</b></a></p>
+                        </div>
+                    </div>
+
+                    <!-- Nepal -->
+                    <div class="contact-box d-flex py-4 align-items-center justify-content-start">
+                        <img src="/images/NEPAL.png" alt="Nepal Flag" class="flag-icon">
+                        <div class="contact-text">
+                        <p><b>Sundhara, Kathmandu, Nepal</b></p>
+                        <p><a href="#" class="text-decoration-none text-black reach"><i class="fa fa-phone mr-1"></i> <b>+9779807555929</b></a></p>
+                        <p><a href="#" class="text-decoration-none text-black reach"><i class="fa fa-envelope mr-1"></i> <b>info@nectardigit.com</b></a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer-section text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+
+                <!-- Column 1: Logo + About -->
+                <div class="col-md-4 mb-4">
+                    <img src="/images/site-logo.png" alt="logo" height="50" class="mb-3">
+                    <p>
+                    Best and reliable Digital Marketing company with expertise in SEO, Software Development, Web Design / Development, and Mobile application.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-2 mb-4">
+                    <h3>Useful Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Privacy and Policy</a></li>
+                        <li><a href="#">HelpCenter</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-md-3 mb-4">
+                    <h3>Our Services</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Web Design & Development</a></li>
+                        <li><a href="#">Mobile App. Development</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Branding & Identity</a></li>
+                        <li><a href="#">Software Development</a></li>
+                        <li><a href="#">IT Consultancy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-md-3 mb-4">
+                    <h3>Subscribe Newsletter</h3>
+                    <form class="subscribe-form d-flex mb-3">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+
+                    <!-- Follow Us Section -->
+                    <h3>Follow Us:</h3>
+                    <div class="social-icons d-flex" style="gap: 10px">
+                        <a href="#" aria-label="Youtube"><img src="/images/youtube.png" alt="Youtube" width="30"></a>
+                        <a href="#" aria-label="Instagram"><img src="/images/instagram.png" alt="Instagram" width="30"></a>
+                        <a href="#" aria-label="Twitter"><img src="/images/twitter.png" alt="Twitter" width="30"></a>
+                        <a href="#" aria-label="Facebook"><img src="/images/facebook.png" alt="Facebook" width="30"></a>
+                    </div>
+                    
+                </div>
+
+            </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <ul class="d-flex justify-content-between">
+                <li>
+                    Copyright © 2026 Nectar Digit. All Right Reserved.
+                </li>
+                <li>
+                    Design & Developed By : Nectar Digit
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Scroll-Top -->
+    <div class="move-top position-fixed">
+        <div class="pulse text-center position-relative">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+    </div>
+</body>
+</html>

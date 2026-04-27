@@ -444,13 +444,13 @@ $(document).ready(function() {
 
     // <Section 10>
     $('#client-slider').owlCarousel({
-    loop: true,
-    margin: 20,
-    items: 1,
-    dots: false,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 3000
+        loop: true,
+        margin: 20,
+        items: 1,
+        dots: false,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 3000
     });
 
     // Footer-Bottom-Move-Top
