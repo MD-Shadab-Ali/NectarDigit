@@ -471,6 +471,26 @@ $(document).ready(function() {
         });
     });
 
-    
+    // Portfolio-pages
+    document.addEventListener("DOMContentLoaded", function () {
+    const pagination = document.querySelectorAll("#pagination .page-item");
+
+    pagination.forEach(item => {
+        item.addEventListener("click", function (e) {
+            const link = this.querySelector("a");
+
+            // ignore if it's disabled or already active span
+            if (!link) return;
+
+            e.preventDefault();
+
+            // remove active from all
+            pagination.forEach(i => i.classList.remove("active"));
+
+            // add active to clicked
+            this.classList.add("active");
+        });
+    });
+});
     
 });
