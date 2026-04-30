@@ -1,0 +1,1259 @@
+/* ============================================================
+   responsive.css — NectarDigit (All Pages) — Full Refinement
+   
+   Breakpoints:
+     ≤1199px  (xl)
+     ≤991px   (lg)
+     ≤767px   (md)
+     ≤575px   (sm)
+     ≤374px   (xs)
+   ============================================================ */
+
+
+
+html {
+  overflow-x: unset !important; /* DO NOT set hidden here, it breaks sticky */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   CRITICAL FIX #2 — images always fluid
+   ============================================================ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   CRITICAL FIX #3 — iframes (Google Maps) responsive
+   ============================================================ */
+iframe {
+  max-width: 100%;
+}
+
+
+/* ============================================================
+   BREAKPOINT: ≤1199px  (xl)
+   ============================================================ */
+@media (max-width: 1199px) {
+
+  /* ----- HERO ----- */
+  .hero-section h1 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  /* ----- SERVICE ANYWHERE — pull floating badges inward ----- */
+  .featureby {
+    right: -10px;
+    width: 210px;
+  }
+  .serviceby {
+    left: -10px;
+  }
+
+  /* ----- CLIENT ZONE ----- */
+  .client-title {
+    font-size: 40px;
+  }
+  .award-chip {
+    left: -50px;
+  }
+
+  /* ----- CONTACT PAGE — bg icon overflow ----- */
+  .contact-bg-logo {
+    right: 80px;
+  }
+  .contact-bg-logo i {
+    font-size: 22rem;
+  }
+}
+
+
+/* ============================================================
+   BREAKPOINT: ≤991px  (lg / tablet landscape)
+   ============================================================ */
+@media (max-width: 991px) {
+
+  /* ===== TOP HEADER ===== */
+  .top-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 2px;
+  }
+  .quote-line {
+    width: 100%;
+  }
+  .top-header-links {
+    width: 100%;
+  }
+  .top-header-links ul {
+    flex-wrap: wrap;
+    padding: 3px 0;
+    gap: 2px !important;
+    justify-content: flex-end;
+  }
+  .top-header-links a {
+    margin-left: 0;
+    margin-right: 6px;
+    font-size: 13px;
+  }
+  /* Separator pipe — hide on small screens to avoid overflow */
+  .top-header-links ul li:not(:last-child)::after {
+    margin-left: 6px;
+  }
+
+  /* ===== NAVBAR ===== */
+  
+  /* Give navbar proper padding */
+  .navbar .container {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  /* ===== HERO ===== */
+  .hero-section h1 {
+    font-size: 34px;
+    line-height: 44px;
+    margin-bottom: 18px;
+  }
+  .hero-section p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 22px;
+  }
+  /* Hero slider drops down below text on mobile */
+  .hero-slider {
+    transform: translateY(0) !important;
+    margin-top: 25px;
+  }
+  .hero-slider img {
+    height: 300px;
+  }
+  /* Remove the wave-overlap bottom effect on tablet */
+  .hero-section::after {
+    height: 80px;
+  }
+
+  /* ===== WORKED SECTION ===== */
+  .worked-section {
+    height: auto !important;
+    padding: 60px 0;
+  }
+  .bg-img {
+    width: 8%;
+    opacity: 0.25;
+  }
+  .content-wrapper {
+    width: 84%;
+  }
+
+  /* ===== SERVICES SECTION ===== */
+  .services-section::before {
+    height: 70px;
+  }
+
+  /* ===== COUNTERS ===== */
+  .counters-section {
+    padding: 60px 0;
+  }
+  .counter-number {
+    font-size: 2.6rem;
+  }
+  /* Border dividers between counters — remove on small */
+  .border-right-lg {
+    border-right: none !important;
+  }
+
+  /* ===== SERVICE ANYWHERE ===== */
+  .service-anywhere {
+    overflow: visible; /* allow badges to show without clipping */
+  }
+  .service-anywhere-right {
+    margin-top: 50px;
+  }
+  .service-anywhere-right .service-anywhere-img {
+    height: 400px;
+  }
+  .service-anywhere-left .service-anywhere-img {
+    height: 320px;
+  }
+  /* Pull floating badges inward so they don't overflow viewport */
+  .featureby {
+    right: 0;
+    top: 190px;
+    width: 200px;
+  }
+  .serviceby {
+    left: 0;
+    bottom: 20px;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-image {
+    margin-bottom: 30px;
+  }
+  .faq-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* ===== VIDEO SECTION ===== */
+  .video-wrapper {
+    margin-top: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .video-wrapper h2 {
+    /* text-align: center !important; */
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .video-popup {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  /* Award chip — take it out of absolute flow */
+  .award-chip {
+    position: static !important;
+    display: inline-flex;
+    margin: 20px auto 0;
+    border-radius: 8px;
+    transform: translateY(-80px);
+  }
+
+  .video-section-img img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  /* ===== CLIENT ZONE ===== */
+  .client-title {
+    font-size: 50px;
+    line-height: 1.3;
+  }
+  .client-desc {
+    font-size: 17px;
+  }
+  .client-image {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .client-image img {
+    max-width: 380px;
+  }
+  .client-rating {
+    left: 200px !important;
+    bottom: 30px;
+  }
+
+  /* ===== ABOUT PAGE ===== */
+  .mission-wrap {
+    margin-bottom: 20px;
+    height: auto;
+  }
+  .about-us-content h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  /* ===== HOW SECTION (about.html) ===== */
+  .how-section-wrap {
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+
+  /* ===== SERVICES PAGE ===== */
+  .service-page .service-wrap {
+    min-height: auto;
+  }
+
+  /* ===== CONTACT PAGE ===== */
+  .contact-bg-logo {
+    display: none;
+  }
+  .contact-form {
+    padding: 25px;
+    margin-top: 25px;
+  }
+  .contact-form-img img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-bottom ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  /* ===== PAGE HERO BANNER (all inner pages) ===== */
+  .about-page-section-wrap {
+    height: 150px !important;
+  }
+  .about-page-section-wrap nav .breadcrumb li {
+    font-size: 15px;
+  }
+}
+
+
+/* ============================================================
+   BREAKPOINT: ≤767px  (md / tablet portrait)
+   ============================================================ */
+@media (max-width: 767px) {
+
+  /* ===== GLOBAL SPACING ===== */
+  .mt { margin-top: 40px !important; }
+  .mb { margin-bottom: 40px !important; }
+  .pt { padding-top: 40px !important; }
+  .pb { padding-bottom: 40px !important; }
+
+  p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  /* ===== HERO ===== */
+  .hero-section {
+    padding-top: 30px !important;
+    padding-bottom: 50px !important;
+  }
+  .hero-section h1 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 14px;
+  }
+  .hero-section p {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 18px;
+  }
+  .hero-slider {
+    margin-top: 20px;
+  }
+  .hero-slider img {
+    height: 220px;
+  }
+  .hero-section::after {
+    height: 60px;
+  }
+
+  /* ===== WORKED SECTION ===== */
+  .bg-img {
+    display: none; /* decorative only — safe to hide */
+  }
+  .content-wrapper {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .worked-section {
+    padding: 40px 0;
+  }
+  .worked-text {
+    font-size: 15px;
+  }
+
+  /* ===== SERVICES SECTION ===== */
+  .section-title {
+    font-size: 26px;
+  }
+  .section-subtitle {
+    font-size: 14px;
+  }
+  .services-section {
+    padding-top: 70px !important;
+  }
+
+  /* ===== COUNTERS ===== */
+  .counter-card {
+    padding: 1.4rem 1rem;
+    border-radius: 20px;
+  }
+  .counter-number {
+    font-size: 2.2rem;
+  }
+  .counter-icon {
+    width: 65px;
+    height: 65px;
+  }
+  .counter-icon i {
+    font-size: 2rem;
+  }
+  .counter-label {
+    font-size: 0.82rem;
+  }
+
+  /* ===== SERVICE ANYWHERE ===== */
+  .service-anywhere {
+    overflow: hidden;
+  }
+  .service-anywhere-left .service-anywhere-img {
+    height: 240px;
+    margin-top: 20px;
+  }
+  .service-anywhere-right .service-anywhere-img {
+    height: 280px;
+  }
+  /* Bring floating badges into normal flow */
+  .serviceby,
+  .featureby {
+    position: static !important;
+    display: inline-flex;
+    margin: 14px auto 0;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: auto;
+    border-radius: 12px;
+    padding: 8px 14px;
+  }
+  .service-anywhere-left .service-anywhere-img,
+  .service-anywhere-right .service-anywhere-img {
+    position: relative; /* ensure z-index context is right */
+  }
+
+  /* ===== BLOG SECTION ===== */
+  .main-title {
+    margin-bottom: 30px;
+  }
+  .main-title h2 {
+    font-size: 22px;
+  }
+  .main-title p {
+    font-size: 14px;
+  }
+  .blog-img img {
+    height: 200px;
+  }
+  .blog-content {
+    padding: 15px 18px;
+  }
+  .blog-content h3 button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* ===== ABOUT-PRODUCTS SECTION ===== */
+  .about-section {
+    padding: 45px 0;
+  }
+  .about-section-title h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .about-section-title p {
+    font-size: 14px;
+  }
+  .about-section-wrap {
+    gap: 16px;
+  }
+  .about-section-item {
+    height: 150px;
+    width: 135px;
+    border-radius: 8px;
+  }
+  .about-section-item i {
+    font-size: 28px;
+  }
+  .about-section-item span {
+    font-size: 13px;
+    max-width: 110px;
+    line-height: 18px;
+  }
+
+  /* ===== FAQ ===== */
+  .faq {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .faq-image img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  .faq .accordion-button {
+    font-size: 15px;
+    padding: 14px 16px;
+    line-height: 22px;
+  }
+  .accordion-body p {
+    font-size: 14px;
+  }
+
+  /* ===== VIDEO SECTION ===== */
+  .video-section {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+  .video-wrapper h2 {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+  .video-popup {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .video-popup a {
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    font-size: 20px;
+  }
+  .video-section-img {
+    margin-top: 15px;
+  }
+
+  /* ===== CLIENT ZONE ===== */
+  .client-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .client-desc {
+    font-size: 15px;
+  }
+  .slide-inner {
+    padding: 20px 16px !important;
+  }
+  .client-image img {
+    max-width: 200px;
+  }
+  .client-rating {
+    width: 150px;
+    height: 150px;
+    left: 5px !important;
+    bottom: 5px;
+  }
+  .g-rating {
+    font-size: 14px;
+  }
+
+  /* ===== CONTACT STRIP ===== */
+  .contact-strip {
+    padding: 40px 0;
+  }
+  .contact-row {
+    flex-direction: column !important;
+  }
+  .contact-box {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #ddd;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 18px 20px;
+    gap: 15px;
+  }
+  .contact-box:last-child {
+    border-bottom: none;
+  }
+  .flag-icon {
+    height: 40px;
+    margin-right: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .contact-text p {
+    font-size: 14px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-section h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .footer-section p {
+    font-size: 14px;
+  }
+  .footer-section a {
+    font-size: 14px;
+  }
+  .footer-section .subscribe-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-section .subscribe-form input {
+    width: 100%;
+    margin-right: 0;
+  }
+  .footer-section .subscribe-form button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* ===== ABOUT PAGE ===== */
+  .about-us-content h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 30px !important;
+  }
+  .about-us-content p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .mission {
+    margin-top: 30px;
+  }
+  .mission-wrap {
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px 16px;
+  }
+  .mission-wrap i {
+    font-size: 32px;
+  }
+  .mission-wrap span {
+    font-size: 18px;
+  }
+
+  /* HOW SECTION */
+  .how-section-wrap {
+    min-height: auto;
+    padding: 20px 16px;
+    margin-bottom: 18px;
+  }
+  .how-section-wrap img {
+    max-height: 60px;
+  }
+  .how-section-wrap h3 {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+  .how-section-wrap p {
+    font-size: 14px;
+  }
+
+  /* ===== SERVICES PAGE ===== */
+  .service-page .service-wrap {
+    min-height: auto;
+    padding: 22px 18px;
+    margin-bottom: 18px;
+  }
+  .service-icon {
+    height: 130px;
+    width: 130px;
+    padding: 14px;
+  }
+  .service-content h3 {
+    font-size: 18px;
+    color: #000;
+  }
+  .service-content p {
+    font-size: 14px;
+  }
+
+  /* ===== PORTFOLIO PAGE ===== */
+  .portfolio-wrap {
+    margin-bottom: 18px;
+  }
+  .portfolio-content span {
+    font-size: 14px;
+  }
+  .pagination-item nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  /* ===== AD MARKETING PAGES ===== */
+  .about-page-section-wrap {
+    height: 130px !important;
+  }
+  .facebook-details-content {
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .facebook-details-content h3 {
+    margin-top: -20px;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+  .facebook-details-content span {
+    font-size: 15px;
+  }
+  .facebook-details-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* ===== BLOG PAGE ===== */
+  .blog-page .nav-tabs {
+    justify-content: center !important;
+    margin-bottom: 20px !important;
+  }
+  .blog-page .nav-tabs li .nav-link {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+
+  /* ===== CONTACT PAGE ===== */
+  .contact-page .row {
+    gap: 0;
+  }
+  .contact-wrap {
+    margin-bottom: 20px;
+    flex-direction: row !important;
+    align-items: flex-start;
+    text-align: left;
+    padding: 15px 0;
+  }
+  .contact-icon {
+    margin-right: 16px !important;
+    flex-shrink: 0;
+  }
+  .contact-icon i {
+    font-size: 32px;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .contact-content span {
+    font-size: 20px;
+  }
+  .contact-content p {
+    font-size: 14px;
+  }
+  .contact-form {
+    padding: 22px 18px;
+    margin-top: 20px;
+  }
+  .contact-form h3 {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 16px !important;
+  }
+  .contact-form .form-control {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .contact-form textarea.form-control {
+    min-height: 100px;
+  }
+  .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+  }
+  .map iframe {
+    height: 280px;
+  }
+}
+
+
+/* ============================================================
+   BREAKPOINT: ≤575px  (sm / mobile)
+   ============================================================ */
+@media (max-width: 575px) {
+
+  /* ===== TOP HEADER ===== */
+  .top-header-links ul li:not(:last-child)::after {
+    content: ""; /* remove pipe separators on very small screens */
+    margin-left: 0;
+  }
+  .top-header-links a {
+    font-size: 12px;
+    margin-right: 4px;
+  }
+
+  #top-header-slider .item {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .top-header-links ul {
+    display: none !important;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar-brand img {
+    height: 40px !important;
+  }
+
+  /* ===== HERO ===== */
+  .hero-section {
+    padding-top: 25px !important;
+    padding-bottom: 40px !important;
+  }
+  .hero-section h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .hero-section p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+  .hero-slider img {
+    height: 190px;
+  }
+  /* Learn More button */
+  .hero-section .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  /* ===== WORKED SECTION ===== */
+  .content-wrapper h2 {
+    font-size: 22px;
+  }
+
+  /* ===== SERVICES SECTION ===== */
+  .section-title {
+    font-size: 22px;
+  }
+
+  /* ===== COUNTERS ===== */
+  .counter-number {
+    font-size: 1.9rem;
+  }
+  .counter-label {
+    font-size: 0.76rem;
+    letter-spacing: 0.3px;
+  }
+  .counter-icon {
+    width: 58px;
+    height: 58px;
+  }
+  .counter-icon i {
+    font-size: 1.7rem;
+  }
+  .counter-card {
+    border-radius: 18px;
+  }
+
+  /* ===== SERVICE ANYWHERE ===== */
+  .service-anywhere-left .service-anywhere-img {
+    height: 200px;
+  }
+  .service-anywhere-right .service-anywhere-img {
+    height: 240px;
+  }
+  .serviceby,
+  .featureby {
+    width: 75%;
+    justify-content: flex-start;
+    border-radius: 20px;
+    transform: translateY(-70px);
+  }
+
+  /* ===== ABOUT-PRODUCTS SECTION ===== */
+  .about-section-wrap {
+    gap: 12px;
+    justify-content: center;
+  }
+  .about-section-item {
+    height: 135px;
+    width: 125px;
+    border-radius: 6px;
+  }
+  .about-section-item i {
+    font-size: 26px;
+  }
+  .about-section-item span {
+    font-size: 12px;
+    max-width: 105px;
+  }
+  .about-section-title h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  /* ===== CLIENT ZONE ===== */
+  .client-title {
+    font-size: 20px;
+  }
+  .client-desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .testi-img img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .slide-inner p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .user-info h2 {
+    font-size: 15px !important;
+  }
+  .user-info p {
+    font-size: 13px;
+  }
+  .star-line {
+    font-size: 16px;
+  }
+  .client-image img {
+    max-width: 190px;
+  }
+  .client-rating {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* ===== CONTACT STRIP ===== */
+  .contact-strip {
+    padding: 28px 0;
+  }
+  .contact-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 15px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-section {
+    padding-top: 30px !important;
+    padding-bottom: 15px !important;
+  }
+  .footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .footer-section p,
+  .footer-section a,
+  .footer-section li {
+    font-size: 13px;
+  }
+  .footer-section .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+  .footer-bottom ul {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* ===== SCROLL-TO-TOP ===== */
+  .move-top {
+    bottom: 14px;
+    right: 14px;
+  }
+  .pulse {
+    height: 36px;
+    width: 36px;
+    line-height: 34px;
+    font-size: 14px;
+  }
+
+  /* ===== OFFCANVAS ===== */
+  .custom-offcanvas {
+    width: 280px;
+  }
+  .custom-header h5 {
+    font-size: 20px;
+  }
+  .info-item {
+    font-size: 15px;
+    gap: 16px;
+  }
+
+  /* ===== ABOUT PAGE ===== */
+  .about-us-content h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .about-us-content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .mission-wrap {
+    padding: 18px 14px;
+  }
+  .mission-wrap i {
+    font-size: 28px;
+  }
+  .mission-wrap span {
+    font-size: 16px;
+  }
+  .mission-wrap p {
+    font-size: 14px;
+  }
+
+  /* HOW SECTION */
+  .how-section-wrap {
+    padding: 18px 14px;
+  }
+  .how-section-wrap h3 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .how-section-wrap p {
+    font-size: 13px;
+  }
+
+  /* ===== SERVICES PAGE ===== */
+  .service-icon {
+    height: 110px;
+    width: 110px;
+  }
+  .service-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .service-content p {
+    font-size: 13px;
+  }
+  .service-page .service-wrap {
+    padding: 20px 16px;
+  }
+
+  /* ===== PORTFOLIO PAGE ===== */
+  .pagination {
+    padding: 10px 5px;
+    margin-top: 20px;
+  }
+  .pagination .page-item .page-link {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  /* ===== AD MARKETING PAGES ===== */
+  .about-page-section-wrap {
+    height: 110px !important;
+  }
+  .about-page-section-wrap nav .breadcrumb li {
+    font-size: 13px;
+  }
+  .facebook-details-content {
+    padding: 16px;
+    border-radius: 6px;
+  }
+  .facebook-details-content h3 {
+    margin-top: -16px;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+  .facebook-details-content p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  /* ===== BLOG PAGE ===== */
+  .blog-page {
+    margin-bottom: -20px;
+  }
+  .blog-img img {
+    height: 180px;
+  }
+  .blog-content h3 button {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .blog-content ul li {
+    font-size: 12px;
+  }
+
+  /* ===== DOCS / GET SUPPORT ===== */
+  .career h2 {
+    font-size: 22px;
+  }
+
+  /* ===== CONTACT PAGE ===== */
+  .contact-wrap {
+    flex-direction: column !important;
+    text-align: center;
+    align-items: center;
+    padding: 14px 0;
+  }
+  .contact-icon {
+    margin-right: 0 !important;
+    margin-bottom: 10px;
+  }
+  .contact-icon i {
+    font-size: 26px;
+    height: 52px;
+    width: 52px;
+    line-height: 52px;
+  }
+  .contact-content {
+    text-align: center;
+  }
+  .contact-content span {
+    font-size: 18px;
+  }
+  .contact-content p {
+    font-size: 13px;
+  }
+  .contact-form {
+    padding: 18px 14px;
+  }
+  .contact-form h3 {
+    font-size: 16px;
+  }
+  .contact-form .form-control {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+  .g-recaptcha {
+    transform: scale(0.82);
+    transform-origin: 0 0;
+  }
+  .map iframe {
+    height: 240px;
+  }
+}
+
+
+/* ============================================================
+   BREAKPOINT: ≤374px  (xs / very small phones)
+   ============================================================ */
+@media (max-width: 374px) {
+
+  /* TOP HEADER */
+  #top-header-slider {
+    overflow: hidden;
+    /* height: 40px; */
+    position: relative;
+  }
+
+  #top-header-slider .track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+
+  #top-header-slider .item {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* prevents text wrapping overflow */
+    overflow: hidden;  
+  }
+
+  .top-header-links ul {
+    display: none !important;
+  }
+
+  /* NAVBAR */
+  /* Hide center nav — hamburger/offcanvas takes over */
+  .navbar-nav {
+    display: none !important;
+  }
+
+  /* HERO */
+  .hero-section h1 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .hero-slider img {
+    height: 160px;
+  }
+
+  /* COUNTERS */
+  .counter-number {
+    font-size: 1.5rem;
+  }
+  .counter-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .counter-icon i {
+    font-size: 1.5rem;
+  }
+
+  /* Service-Anywhere */
+  .serviceby,
+  .featureby {
+    width: 75%;
+    justify-content: flex-start;
+    border-radius: 20px;
+    transform: translateY(-70px);
+  }
+
+  /* ABOUT PRODUCTS */
+  .about-section-item {
+    text-align: center;
+    height: 115px;
+    width: 108px;
+  }
+  .about-section-title h3 {
+    font-size: 20px;
+  }
+
+  .about-section-wrap {
+    justify-content: center;
+  }
+
+  #about-product-slider .slick-track {
+    display: flex !important;
+  }
+
+  #about-product-slider .slick-slide {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .about-section-item {
+    margin: 0 auto;
+  }
+
+  #about-product-slider .owl-nav {
+    transform: translateY(-25px);
+  }
+
+  /* Client-Zone */
+  .client-image {
+    position: relative;
+  }
+
+  /* ABOUT PAGE */
+  .about-us-content h2 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* AD PAGES */
+  .facebook-details-content h3 {
+    font-size: 15px;
+  }
+  .facebook-details-content p {
+    font-size: 13px;
+  }
+
+  /* CONTACT */
+  .contact-form {
+    padding: 14px 12px;
+  }
+  .g-recaptcha {
+    transform: scale(0.72);
+    transform-origin: 0 0;
+  }
+
+  /* OFFCANVAS full width on tiny phones */
+  .custom-offcanvas {
+    width: 100vw;
+  }
+
+  /* FOOTER */
+  .footer-bottom ul {
+    font-size: 10px;
+  }
+}
