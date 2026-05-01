@@ -1372,14 +1372,14 @@ hr {
 .video-popup a {
     height: 95px;
     width: 95px;
-    text-align: center;
-    line-height: 95px;
     background: #fff;
     font-size: 24px;
     color: #19203f;
     position: relative;
     z-index: 10;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 100%;
     transition: all 0.4s ease-in-out;
 }
@@ -1550,13 +1550,6 @@ hr {
     font-size: 19px;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
-    .client-rating {
-        left: 10px;
-    }
-}
-
 /* contact-strip */
 
 .contact-strip {
@@ -1596,10 +1589,10 @@ hr {
 }
 
 .contact-text p {
-  margin: 4px 0;
-  font-size: 15px;
-  color: #212529;
-  line-height: 1.5;
+    margin: 4px 0;
+    font-size: 15px;
+    color: #212529;
+    line-height: 1.5;
 }
 
 
