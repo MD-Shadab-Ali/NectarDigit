@@ -135,7 +135,7 @@ iframe {
     margin-top: 25px;
   }
   .hero-slider img {
-    height: 300px;
+    height: 600px;
   }
   /* Remove the wave-overlap bottom effect on tablet */
   .hero-section::after {
@@ -180,20 +180,20 @@ iframe {
     margin-top: 50px;
   }
   .service-anywhere-right .service-anywhere-img {
-    height: 400px;
+    height: 600px;
   }
   .service-anywhere-left .service-anywhere-img {
-    height: 320px;
+    height: 400px;
   }
   /* Pull floating badges inward so they don't overflow viewport */
   .featureby {
     right: 0;
-    top: 190px;
+    top: 220px;
     width: 200px;
   }
   .serviceby {
     left: 0;
-    bottom: 20px;
+    bottom: 60px;
   }
 
   /* ===== FAQ ===== */
@@ -253,7 +253,7 @@ iframe {
     max-width: 380px;
   }
   .client-rating {
-    left: 100px !important;
+    left: 110px;
     bottom: 30px;
   }
 
@@ -440,7 +440,7 @@ iframe {
   }
   .serviceby,
   .featureby {
-    width: 75%;
+    width: 40%;
     justify-content: flex-start;
     border-radius: 20px;
     transform: translateY(-70px);
@@ -539,7 +539,7 @@ iframe {
     padding-bottom: 35px;
   }
   .video-wrapper h2 {
-    font-size: 22px;
+    font-size: 32px;
     line-height: 32px;
     margin-bottom: 16px;
   }
@@ -573,7 +573,7 @@ iframe {
 
   /* ===== CLIENT ZONE ===== */
   .client-title {
-    font-size: 24px;
+    font-size: 35px;
     line-height: 1.3;
   }
   .client-desc {
@@ -588,9 +588,19 @@ iframe {
   .client-rating {
     width: 150px;
     height: 150px;
-    left: 165px !important;
-    bottom: 5px;
+    left: 165px;
+    bottom: 20px;
   }
+  .company-logo-free {
+    top: 5px;
+    background: #fff;
+  }
+  .client-rating .company-logo {
+    height: 42px;
+    width: 42px;
+  }
+    
+
   .g-rating {
     font-size: 14px;
   }
@@ -861,7 +871,7 @@ iframe {
     margin-bottom: 16px;
   }
   .hero-slider img {
-    height: 190px;
+    height: 300px;
   }
   /* Learn More button */
   .hero-section .btn {
@@ -900,14 +910,14 @@ iframe {
 
   /* ===== SERVICE ANYWHERE ===== */
   .service-anywhere-left .service-anywhere-img {
-    height: 200px;
+    height: 240px;
   }
   .service-anywhere-right .service-anywhere-img {
-    height: 240px;
+    height: 340px;
   }
   .serviceby,
   .featureby {
-    width: 75%;
+    width: 45%;
     justify-content: flex-start;
     border-radius: 20px;
     transform: translateY(-70px);
@@ -971,7 +981,7 @@ iframe {
 
   /* ===== CLIENT ZONE ===== */
   .client-title {
-    font-size: 20px;
+    font-size: 30px;
   }
   .client-desc {
     font-size: 14px;
@@ -997,10 +1007,24 @@ iframe {
   .client-image img {
     max-width: 220px;
   }
+
+  /* Floating-Box */
   .client-rating {
     width: 140px;
     height: 140px;
-    left: 40px !important;
+    left: 10px;
+    bottom: 20px;
+  }
+  .company-logo-free {
+    top: 20px;
+    background: #fff;
+  }
+  .client-rating .company-logo {
+    height: 38px;
+    width: 38px;
+  }
+  .client-rating .google-rating-item .company-rating {
+    top: 30% !important;
   }
 
   /* ===== CONTACT STRIP ===== */
@@ -1257,7 +1281,7 @@ iframe {
     line-height: 26px;
   }
   .hero-slider img {
-    height: 160px;
+    height: 220px;
   }
 
   /* COUNTERS */
@@ -1313,15 +1337,23 @@ iframe {
   }
 
   /* Client-Zone */
-  .client-image {
-    position: relative;
-  }
-
   .client-rating {
     width: 140px;
     height: 140px;
-    left: 0px !important;
-    bottom: 10px;
+    left: 0;
+    bottom: 15px;
+  }
+  .company-logo-free {
+    top: 20px;
+    background: #fff;
+  }
+  .client-rating .company-logo {
+    height: 38px;
+    width: 38px;
+  }
+
+  .client-rating .google-rating-item .company-rating {
+    top: 30% !important;
   }
 
   /* ABOUT PAGE */

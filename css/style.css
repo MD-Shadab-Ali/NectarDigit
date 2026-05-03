@@ -374,17 +374,42 @@ hr {
     font-weight: 600;
 }
 
-.footer-section a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
+.footer-section ul li {
+    position: relative;
     margin-bottom: 8px;
-    transition: 0.3s;
 }
 
-.footer-section a:hover {
+.footer-section ul li a {
+    display: block;
+    position: relative;
+    padding-left: 20px; /* Space for the ">>" icon */
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer-section ul li a:before {
+    position: absolute;
+    content: '\f101';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Font Awesome 6 Free'; 
+    font-weight: 900; 
+    font-size: 12px;
+    color: #ccc;
+    transition: all 0.3s ease; 
+}
+
+/* Hover effect */
+.footer-section ul li a:hover {
+    color: #ff0004; 
+    padding-left: 25px; 
+}
+
+.footer-section ul li a:hover:before {
+    padding-left: 5px; 
     color: #ff0004;
-    padding-left: 5px;
 }
 
 .footer-section p {
@@ -496,7 +521,7 @@ hr {
     z-index: 1;
 }
 /* Force right column control */
- .hero-section .col-lg-6:last-child {
+.hero-section .col-lg-6:last-child {
     display: flex;
     align-items: flex-start;
 }
@@ -632,8 +657,6 @@ hr {
     transform: scale(1.05);
 
 }
-
-
 
 /* <Section 3> */
 .services-section {
@@ -1187,7 +1210,7 @@ hr {
     max-width: 160px;
 }
 .about-section-item span:hover {
-    color: var(--primary-color)
+    color: var(--primary-color);
     
 }
 /* each owl slide becomes a grid page */
@@ -1238,8 +1261,6 @@ hr {
 #about-product-slider .owl-nav button:hover i {
     color: #fff;
 }
-
-
 /* End of About CSS  */
 
 /* <Section 8> */
@@ -1551,7 +1572,6 @@ hr {
 }
 
 /* contact-strip */
-
 .contact-strip {
     background: rgb(247 245 241);
     padding: 90px 0;
@@ -1600,23 +1620,6 @@ hr {
     text-decoration: underline !important;
     text-decoration-color: black !important;
     text-decoration-thickness: 1px;
-}
-
-/* Responsibe */
-@media (max-width: 768px) {
-  .contact-row {
-    flex-direction: column;
-  }
-
-  .contact-box {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .contact-box:last-child {
-    border-bottom: none;
-  }
 }
 
 /* About-Page */
