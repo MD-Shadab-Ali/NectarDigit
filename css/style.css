@@ -2226,6 +2226,10 @@ hr {
 .service-sidebar ul li button:hover {
     color: var(--primary-color);
 }
+.service-sidebar ul li a:hover {
+    color: var(--primary-color) !important;
+}
+
 
 /* FULL DARK MODE OVERRIDE */
 
@@ -2465,6 +2469,10 @@ hr {
     color: #cbd5e1 !important;
 }
 
+[data-bs-theme="dark"] .footer-section a:hover {
+    color: var(--primary-color) !important;
+}
+
 /* About-page */
 [data-bs-theme="dark"] .about-us-content h2 {
     color: var(--white-color) !important;
@@ -2524,5 +2532,11 @@ hr {
 
 [data-bs-theme="dark"] .contact-content span,
 [data-bs-theme="dark"] .contact-content p {
+    color: var(--white-color) !important;
+}
+
+/* Web Design & Development */
+[data-bs-theme="dark"] .single-serve h3,
+[data-bs-theme="dark"] .single-serve .serve {
     color: var(--white-color) !important;
 }

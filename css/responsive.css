@@ -1,12 +1,12 @@
 /* ============================================================
-   responsive.css — NectarDigit (All Pages) — Full Refinement
-   
-   Breakpoints:
-     ≤1199px  (xl)
-     ≤991px   (lg)
-     ≤767px   (md)
-     ≤575px   (sm)
-     ≤374px   (xs)
+  responsive.css — NectarDigit
+  
+  Breakpoints:
+    ≤1199px  (xl)
+    ≤991px   (lg)
+    ≤767px   (md)
+    ≤575px   (sm)
+    ≤374px   (xs)
    ============================================================ */
 
 
@@ -20,7 +20,7 @@ body {
 }
 
 /* ============================================================
-   CRITICAL FIX #2 — images always fluid
+  images always fluid
    ============================================================ */
 img {
   max-width: 100%;
@@ -28,7 +28,7 @@ img {
 }
 
 /* ============================================================
-   CRITICAL FIX #3 — iframes (Google Maps) responsive
+  iframes (Google Maps) 
    ============================================================ */
 iframe {
   max-width: 100%;
@@ -40,13 +40,13 @@ iframe {
    ============================================================ */
 @media (max-width: 1199px) {
 
-  /* ----- HERO ----- */
+  /* HERO */
   .hero-section h1 {
     font-size: 42px;
     line-height: 52px;
   }
 
-  /* ----- SERVICE ANYWHERE — pull floating badges inward ----- */
+  /* SERVICE ANYWHERE */
   .featureby {
     right: -10px;
     width: 210px;
@@ -55,7 +55,7 @@ iframe {
     left: -10px;
   }
 
-  /* ----- CLIENT ZONE ----- */
+  /* CLIENT ZONE */
   .client-title {
     font-size: 40px;
   }
@@ -63,7 +63,7 @@ iframe {
     left: -50px;
   }
 
-  /* ----- CONTACT PAGE — bg icon overflow ----- */
+  /* CONTACT PAGE */
   .contact-bg-logo {
     right: 80px;
   }
@@ -74,30 +74,32 @@ iframe {
 
 
 /* ============================================================
-   BREAKPOINT: ≤991px  (lg / tablet landscape)
+  BREAKPOINT: ≤991px  (lg / tablet landscape)
    ============================================================ */
 @media (max-width: 991px) {
 
-  /* ===== TOP HEADER ===== */
+  /* TOP HEADER */
   .top-header .container {
     position: relative;
     z-index: 2;
-    flex-direction: column;
-    align-items: flex-start;
-    /* padding-top: 5px;
-    padding-bottom: 5px; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 2px;
   }
   .quote-line {
-    width: 100%;
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
   }
   .top-header-links {
-    width: 100%;
+    width: auto;
+    flex: 0 0 auto;
+
   }
   .top-header-links ul {
     flex-wrap: wrap;
-    /* padding: 3px 0;
-    gap: 2px !important; */
     justify-content: flex-end;
   }
   .top-header-links a {
@@ -105,20 +107,18 @@ iframe {
     margin-right: 6px;
     font-size: 13px;
   }
-  /* Separator pipe — hide on small screens to avoid overflow */
+  /* Separator pipe: hide on small screens to avoid overflow */
   .top-header-links ul li:not(:last-child)::after {
     margin-left: 6px;
   }
 
-  /* ===== NAVBAR ===== */
-  
-  /* Give navbar proper padding */
+  /* NAVBAR */
   .navbar .container {
     padding-top: 6px;
     padding-bottom: 6px;
   }
 
-  /* ===== HERO ===== */
+  /* HERO */
   .hero-section h1 {
     font-size: 34px;
     line-height: 44px;
@@ -142,7 +142,7 @@ iframe {
     height: 80px;
   }
 
-  /* ===== WORKED SECTION ===== */
+  /* WORKED SECTION */
   .worked-section {
     height: auto !important;
     padding: 60px 0;
@@ -155,24 +155,24 @@ iframe {
     width: 84%;
   }
 
-  /* ===== SERVICES SECTION ===== */
+  /* SERVICES SECTION */
   .services-section::before {
     height: 70px;
   }
 
-  /* ===== COUNTERS ===== */
+  /* COUNTERS */
   .counters-section {
     padding: 60px 0;
   }
   .counter-number {
     font-size: 2.6rem;
   }
-  /* Border dividers between counters — remove on small */
+  /* Border dividers between counters */
   .border-right-lg {
     border-right: none !important;
   }
 
-  /* ===== SERVICE ANYWHERE ===== */
+  /* SERVICE ANYWHERE */
   .service-anywhere {
     overflow: visible; /* allow badges to show without clipping */
   }
@@ -196,7 +196,7 @@ iframe {
     bottom: 60px;
   }
 
-  /* ===== FAQ ===== */
+  /* FAQ */
   .faq-image {
     margin-bottom: 30px;
   }
@@ -207,14 +207,13 @@ iframe {
     border-radius: 8px;
   }
 
-  /* ===== VIDEO SECTION ===== */
+  /* VIDEO SECTION */
   .video-wrapper {
     margin-top: 0;
     padding-right: 0;
     text-align: center;
   }
   .video-wrapper h2 {
-    /* text-align: center !important; */
     font-size: 38px;
     line-height: 40px;
     margin-bottom: 20px;
@@ -223,7 +222,7 @@ iframe {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  /* Award chip — take it out of absolute flow */
+  /* Award chip: take it out of absolute flow */
   .award-chip {
     position: static !important;
     display: inline-flex;
@@ -237,7 +236,7 @@ iframe {
     border-radius: 12px;
   }
 
-  /* ===== CLIENT ZONE ===== */
+  /* CLIENT ZONE */
   .client-title {
     font-size: 50px;
     line-height: 1.3;
@@ -257,7 +256,7 @@ iframe {
     bottom: 30px;
   }
 
-  /* ===== ABOUT PAGE ===== */
+  /* ABOUT PAGE */
   .mission-wrap {
     margin-bottom: 20px;
     height: auto;
@@ -267,18 +266,18 @@ iframe {
     line-height: 38px;
   }
 
-  /* ===== HOW SECTION (about.html) ===== */
+  /* HOW SECTION (about.html) */
   .how-section-wrap {
     min-height: auto;
     margin-bottom: 20px;
   }
 
-  /* ===== SERVICES PAGE ===== */
+  /* SERVICES PAGE */
   .service-page .service-wrap {
     min-height: auto;
   }
 
-  /* ===== CONTACT PAGE ===== */
+  /* CONTACT PAGE */
   .contact-bg-logo {
     display: none;
   }
@@ -291,7 +290,7 @@ iframe {
     border-radius: 12px;
   }
 
-  /* ===== FOOTER ===== */
+  /* FOOTER */
   .footer-bottom ul {
     flex-direction: column;
     align-items: center;
@@ -299,18 +298,92 @@ iframe {
     text-align: center;
   }
 
-  /* ===== PAGE HERO BANNER (all inner pages) ===== */
+  /* PAGE HERO BANNER */
   .about-page-section-wrap {
     height: 150px !important;
   }
   .about-page-section-wrap nav .breadcrumb li {
     font-size: 15px;
   }
+
+  /* SERVICE DETAIL PAGES (single-serve layout) */
+  .single-serve .col-lg-8,
+  .single-serve .col-md-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Sidebar column */
+  .single-serve .col-lg-4,
+  .single-serve .col-md-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-top: 30px; 
+  }
+
+  /* Disable sticky on sidebar: it causes overlap on short pages */
+  .service-sidebar-wrap {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* Sidebar heading */
+  .service-sidebar h3 {
+    margin-top: -16px !important;
+    margin-right: -16px !important;
+    margin-left: -16px !important;
+    padding: 12px 16px !important;
+    font-size: 17px;
+  }
+
+  /* Service detail image */
+  .single-serve-img img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* Service content wrapper */
+  .single-serve-content {
+    font-size: 1rem !important;
+    padding: 20px 16px !important;
+  }
+
+  .single-serve-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .single-serve-content .serve {
+    font-size: 15px !important;
+    line-height: 26px !important;
+  }
+
+  /* FAQ inside service page */
+  .service-faq h3 {
+    font-size: 22px !important;
+    padding: 20px !important;
+  }
+
+  .service-faq .accordion-button {
+    font-size: 15px;
+    padding: 14px 16px;
+    line-height: 22px;
+  }
+
+  .service-faq .accordion-body p {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 
 /* ============================================================
-   BREAKPOINT: ≤767px  (md / tablet portrait)
+  BREAKPOINT: ≤767px  (md / tablet portrait)
    ============================================================ */
 @media (max-width: 767px) {
 
@@ -326,11 +399,23 @@ iframe {
   }
 
   .top-header .container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column !important;  
+    align-items: flex-start;           
+    gap: 8px;                          
   }
 
-  /* ===== HERO ===== */
+  .quote-line {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .top-header-links {
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: flex-start;       
+  }
+
+  /* HERO */
   .hero-section {
     padding-top: 30px !important;
     padding-bottom: 50px !important;
@@ -356,9 +441,9 @@ iframe {
     height: 60px;
   }
 
-  /* ===== WORKED SECTION ===== */
+  /* WORKED SECTION */
   .bg-img {
-    display: none; /* decorative only — safe to hide */
+    display: none; 
   }
   .content-wrapper {
     width: 100%;
@@ -371,7 +456,7 @@ iframe {
     font-size: 15px;
   }
 
-  /* ===== SERVICES SECTION ===== */
+  /* SERVICES SECTION */
   .section-title {
     font-size: 26px;
   }
@@ -382,7 +467,7 @@ iframe {
     padding-top: 70px !important;
   }
 
-  /* ===== COUNTERS ===== */
+  /* COUNTERS */
   .counter-card {
     padding: 1.4rem 1rem;
     border-radius: 20px;
@@ -401,7 +486,7 @@ iframe {
     font-size: 0.82rem;
   }
 
-  /* ===== SERVICE ANYWHERE ===== */
+  /* SERVICE ANYWHERE */
   .service-anywhere {
     overflow: hidden;
   }
@@ -428,10 +513,10 @@ iframe {
   }
   .service-anywhere-left .service-anywhere-img,
   .service-anywhere-right .service-anywhere-img {
-    position: relative; /* ensure z-index context is right */
+    position: relative;
   }
 
-  /* ===== SERVICE ANYWHERE ===== */
+  /* SERVICE ANYWHERE */
   .service-anywhere-left .service-anywhere-img {
     height: 300px;
   }
@@ -446,7 +531,7 @@ iframe {
     transform: translateY(-70px);
   }
 
-  /* ===== BLOG SECTION ===== */
+  /* BLOG SECTION */
   .main-title {
     margin-bottom: 30px;
   }
@@ -467,7 +552,7 @@ iframe {
     line-height: 24px;
   }
 
-  /* ===== ABOUT-PRODUCTS SECTION ===== */
+  /* ABOUT-PRODUCTS SECTION */
   .about-section {
     padding: 45px 0;
   }
@@ -512,7 +597,7 @@ iframe {
     transform: translateY(-25px);
   }
 
-  /* ===== FAQ ===== */
+  /* FAQ */
   .faq {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -533,7 +618,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* ===== VIDEO SECTION ===== */
+  /* VIDEO SECTION */
   .video-section {
     padding-top: 45px;
     padding-bottom: 35px;
@@ -571,7 +656,7 @@ iframe {
   }
 
 
-  /* ===== CLIENT ZONE ===== */
+  /* CLIENT ZONE */
   .client-title {
     font-size: 35px;
     line-height: 1.3;
@@ -605,7 +690,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* ===== CONTACT STRIP ===== */
+  /* CONTACT STRIP */
   .contact-strip {
     padding: 40px 0;
   }
@@ -635,7 +720,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* ===== FOOTER ===== */
+  /* FOOTER */
   .footer-section h3 {
     font-size: 18px;
     margin-top: 10px;
@@ -659,7 +744,7 @@ iframe {
     padding: 10px;
   }
 
-  /* ===== ABOUT PAGE ===== */
+  /* ABOUT PAGE */
   .about-us-content h2 {
     font-size: 24px;
     line-height: 32px;
@@ -702,7 +787,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* ===== SERVICES PAGE ===== */
+  /* SERVICES PAGE */
   .service-page .service-wrap {
     min-height: auto;
     padding: 22px 18px;
@@ -721,7 +806,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* ===== PORTFOLIO PAGE ===== */
+  /* PORTFOLIO PAGE */
   .portfolio-wrap {
     margin-bottom: 18px;
   }
@@ -734,7 +819,7 @@ iframe {
     margin-top: 10px;
   }
 
-  /* ===== AD MARKETING PAGES ===== */
+  /* AD MARKETING PAGES */
   .about-page-section-wrap {
     height: 130px !important;
   }
@@ -757,7 +842,7 @@ iframe {
     line-height: 24px;
   }
 
-  /* ===== BLOG PAGE ===== */
+  /* BLOG PAGE */
   .blog-page .nav-tabs {
     justify-content: center !important;
     margin-bottom: 20px !important;
@@ -767,7 +852,7 @@ iframe {
     padding: 4px 12px;
   }
 
-  /* ===== CONTACT PAGE ===== */
+  /* CONTACT PAGE */
   .contact-page .row {
     gap: 0;
   }
@@ -817,15 +902,88 @@ iframe {
   .map iframe {
     height: 280px;
   }
+
+  /* SERVICE DETAIL PAGES (single-serve layout) */
+  /* Full-width content column at mobile */
+  .single-serve .col-lg-8,
+  .single-serve .col-md-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Full-width sidebar stacked below content */
+  .single-serve .col-lg-4,
+  .single-serve .col-md-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-top: 25px;
+  }
+
+  /* Sidebar not sticky on mobile */
+  .service-sidebar-wrap {
+    position: static !important;
+    top: auto !important;
+  }
+
+  /* Sidebar heading */
+  .service-sidebar h3 {
+    margin-top: -16px !important;
+    margin-right: -16px !important;
+    margin-left: -16px !important;
+    padding: 12px 16px !important;
+    font-size: 16px;
+  }
+
+  /* Service detail image */
+  .single-serve-img img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .single-serve-content {
+    font-size: 1rem !important;
+    padding: 16px 14px !important;
+  }
+
+  .single-serve-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .single-serve-content .serve {
+    font-size: 14px !important;
+    line-height: 24px !important;
+  }
+
+  .service-faq h3 {
+    font-size: 20px !important;
+    padding: 16px !important;
+  }
+
+  .service-faq .accordion-button {
+    font-size: 14px;
+    padding: 12px 14px;
+    line-height: 21px;
+  }
+
+  .service-faq .accordion-body p {
+    font-size: 13px;
+    line-height: 22px;
+  }
 }
 
 
 /* ============================================================
-   BREAKPOINT: ≤575px  (sm / mobile)
+  BREAKPOINT: ≤575px  (sm / mobile)
    ============================================================ */
 @media (max-width: 575px) {
 
-  /* ===== TOP HEADER ===== */
+  /* TOP HEADER */
   .top-header-links ul li:not(:last-child)::after {
     content: ""; /* remove pipe separators on very small screens */
     margin-left: 0;
@@ -847,7 +1005,7 @@ iframe {
     display: none !important;
   }
 
-  /* ===== NAVBAR ===== */
+  /* NAVBAR */
   .navbar-brand img {
     height: 40px !important;
   }
@@ -856,7 +1014,7 @@ iframe {
     display: none !important;
   }
 
-  /* ===== HERO ===== */
+  /* HERO */
   .hero-section {
     padding-top: 25px !important;
     padding-bottom: 40px !important;
@@ -879,17 +1037,17 @@ iframe {
     font-size: 14px;
   }
 
-  /* ===== WORKED SECTION ===== */
+  /* WORKED SECTION */
   .content-wrapper h2 {
     font-size: 22px;
   }
 
-  /* ===== SERVICES SECTION ===== */
+  /* SERVICES SECTION */
   .section-title {
     font-size: 22px;
   }
 
-  /* ===== COUNTERS ===== */
+  /* COUNTERS */
   .counter-number {
     font-size: 1.9rem;
   }
@@ -908,7 +1066,7 @@ iframe {
     border-radius: 18px;
   }
 
-  /* ===== SERVICE ANYWHERE ===== */
+  /* SERVICE ANYWHERE */
   .service-anywhere-left .service-anywhere-img {
     height: 240px;
   }
@@ -923,7 +1081,7 @@ iframe {
     transform: translateY(-70px);
   }
 
-  /* ===== ABOUT-PRODUCTS SECTION ===== */
+  /* ABOUT-PRODUCTS SECTION */
   .about-section-wrap {
     gap: 12px;
     justify-content: center;
@@ -979,7 +1137,7 @@ iframe {
     width: 66px;
 }
 
-  /* ===== CLIENT ZONE ===== */
+  /* CLIENT ZONE */
   .client-title {
     font-size: 30px;
   }
@@ -1027,7 +1185,7 @@ iframe {
     top: 30% !important;
   }
 
-  /* ===== CONTACT STRIP ===== */
+  /* CONTACT STRIP */
   .contact-strip {
     padding: 28px 0;
   }
@@ -1038,7 +1196,7 @@ iframe {
     padding: 16px 15px;
   }
 
-  /* ===== FOOTER ===== */
+  /* FOOTER */
   .footer-section {
     padding-top: 30px !important;
     padding-bottom: 15px !important;
@@ -1065,7 +1223,7 @@ iframe {
     padding: 0 10px;
   }
 
-  /* ===== SCROLL-TO-TOP ===== */
+  /* SCROLL-TO-TOP */
   .move-top {
     bottom: 14px;
     right: 14px;
@@ -1077,7 +1235,7 @@ iframe {
     font-size: 14px;
   }
 
-  /* ===== OFFCANVAS ===== */
+  /* OFFCANVAS */
   .custom-offcanvas {
     width: 280px;
   }
@@ -1089,7 +1247,7 @@ iframe {
     gap: 16px;
   }
 
-  /* ===== ABOUT PAGE ===== */
+  /* ABOUT PAGE */
   .about-us-content h2 {
     font-size: 20px;
     line-height: 28px;
@@ -1123,7 +1281,7 @@ iframe {
     font-size: 13px;
   }
 
-  /* ===== SERVICES PAGE ===== */
+  /* SERVICES PAGE */
   .service-icon {
     height: 110px;
     width: 110px;
@@ -1139,7 +1297,7 @@ iframe {
     padding: 20px 16px;
   }
 
-  /* ===== PORTFOLIO PAGE ===== */
+  /* PORTFOLIO PAGE */
   .pagination {
     padding: 10px 5px;
     margin-top: 20px;
@@ -1149,7 +1307,7 @@ iframe {
     font-size: 13px;
   }
 
-  /* ===== AD MARKETING PAGES ===== */
+  /* AD MARKETING PAGES */
   .about-page-section-wrap {
     height: 110px !important;
   }
@@ -1172,7 +1330,7 @@ iframe {
     line-height: 22px;
   }
 
-  /* ===== BLOG PAGE ===== */
+  /* BLOG PAGE */
   .blog-page {
     margin-bottom: -20px;
   }
@@ -1187,12 +1345,12 @@ iframe {
     font-size: 12px;
   }
 
-  /* ===== DOCS / GET SUPPORT ===== */
+  /* DOCS / GET SUPPORT */
   .career h2 {
     font-size: 22px;
   }
 
-  /* ===== CONTACT PAGE ===== */
+  /* CONTACT PAGE */
   .contact-wrap {
     flex-direction: column !important;
     text-align: center;
@@ -1235,18 +1393,89 @@ iframe {
   .map iframe {
     height: 240px;
   }
+
+  /* SERVICE DETAIL PAGES (single-serve) */
+  /* Full-width columns */
+  .single-serve .col-lg-8,
+  .single-serve .col-md-2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .single-serve .col-lg-4,
+  .single-serve .col-md-12 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-top: 20px;
+  }
+
+  /* No sticky sidebar on mobile */
+  .service-sidebar-wrap {
+    position: static !important;
+    top: auto !important;
+  }
+
+  .service-sidebar h3 {
+    margin-top: -16px !important;
+    margin-right: -16px !important;
+    margin-left: -16px !important;
+    padding: 10px 16px !important;
+    font-size: 15px;
+  }
+
+  /* Service detail image */
+  .single-serve-img img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .single-serve-content {
+    font-size: 1rem !important;
+    padding: 14px 12px !important;
+  }
+
+  .single-serve-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .single-serve-content .serve {
+    font-size: 13px !important;
+    line-height: 22px !important;
+  }
+
+  /* FAQ */
+  .service-faq h3 {
+    font-size: 18px !important;
+    padding: 14px !important;
+  }
+
+  .service-faq .accordion-button {
+    font-size: 13px;
+    padding: 11px 13px;
+    line-height: 20px;
+  }
+
+  .service-faq .accordion-body p {
+    font-size: 13px;
+    line-height: 21px;
+  }
 }
 
 
 /* ============================================================
-   BREAKPOINT: ≤374px  (xs / very small phones)
+  BREAKPOINT: ≤374px  (xs / very small phones)
    ============================================================ */
 @media (max-width: 374px) {
 
   /* TOP HEADER */
   #top-header-slider {
     overflow: hidden;
-    /* height: 40px; */
     position: relative;
   }
 
@@ -1270,7 +1499,6 @@ iframe {
   }
 
   /* NAVBAR */
-  /* Hide center nav — hamburger/offcanvas takes over */
   .navbar-nav {
     display: none !important;
   }
@@ -1387,5 +1615,30 @@ iframe {
   /* FOOTER */
   .footer-bottom ul {
     font-size: 10px;
+  }
+
+  /* SERVICE DETAIL PAGES (single-serve) */
+  .single-serve-content {
+    padding: 12px 10px !important;
+  }
+
+  .single-serve-content h3 {
+    font-size: 16px;
+  }
+
+  .single-serve-content .serve {
+    font-size: 13px !important;
+    line-height: 21px !important;
+  }
+
+  /* Smallest hero banner */
+  .about-page-section-wrap {
+    height: 100px !important;
+  }
+
+  /* Smallest FAQ heading */
+  .service-faq h3 {
+    font-size: 16px !important;
+    padding: 12px !important;
   }
 }
