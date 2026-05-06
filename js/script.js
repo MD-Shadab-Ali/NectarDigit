@@ -475,22 +475,98 @@ $(document).ready(function() {
     document.addEventListener("DOMContentLoaded", function () {
     const pagination = document.querySelectorAll("#pagination .page-item");
 
-    pagination.forEach(item => {
-        item.addEventListener("click", function (e) {
-            const link = this.querySelector("a");
+        pagination.forEach(item => {
+            item.addEventListener("click", function (e) {
+                const link = this.querySelector("a");
 
-            // ignore if it's disabled or already active span
-            if (!link) return;
+                // ignore if it's disabled or already active span
+                if (!link) return;
 
-            e.preventDefault();
+                e.preventDefault();
 
-            // remove active from all
-            pagination.forEach(i => i.classList.remove("active"));
+                // remove active from all
+                pagination.forEach(i => i.classList.remove("active"));
 
-            // add active to clicked
-            this.classList.add("active");
+                // add active to clicked
+                this.classList.add("active");
+            });
         });
     });
-});
+
+    // AOS
+    let aosInitialized = false;
+
+    function completeAOSReset() {
+        // Prevent multiple concurrent initializations
+        if (aosInitialized) {
+            // Just refresh if already initialized
+            AOS.refresh();
+            return;
+        }
+    
+        aosInitialized = true;
+        
+        // Remove all AOS-related classes from elements
+        document.querySelectorAll('[data-aos]').forEach(function(el) {
+            el.classList.remove('aos-init', 'aos-animate');
+            el.style.opacity = '';
+            el.style.transform = '';
+            el.style.transition = '';
+        });
+        
+        // Initialize once
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: false,
+            offset: 80,
+            delay: 300,
+            startEvent: 'DOMContentLoaded' // Don't auto-start, we'll control it
+        });
+        
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+            AOS.refresh();
+        }, 50);
+    }
+
+    // Better back button handling without full reload
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            // Reset AOS state without full page reload
+            aosInitialized = false;
+            document.querySelectorAll('[data-aos]').forEach(function(el) {
+                el.classList.remove('aos-init', 'aos-animate');
+            });
+            
+            // Re-trigger animations
+            AOS.refreshHard();
+        }
+    });
+
+    // Handle resize with debounce to prevent multiple calls
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            AOS.refreshHard();
+        }, 200);
+    });
+
+    // Prevent Firefox bfcache issues
+    window.addEventListener('beforeunload', function() {
+        // Empty function to disable bfcache in Firefox
+    });
+
+    // Single initialization on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(completeAOSReset, 100);
+        });
+    } else {
+        // DOM already ready
+        setTimeout(completeAOSReset, 100);
+    }
+
     
 });
