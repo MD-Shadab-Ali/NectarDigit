@@ -312,21 +312,24 @@ $(document).ready(function() {
         lightBtn.style.display = "none";
     });
 
-    // AUTO ACTIVE NAVBAR (WITH DROPDOWN SUPPORT)
-    const currentPage = window.location.pathname.split("/").pop();
+    // ACTIVE NAVBAR (WITH DROPDOWN)
+    const pathSegments = window.location.pathname.split("/").filter(Boolean);
+    const currentPage = pathSegments.length ? pathSegments[pathSegments.length - 1] : "index.html";
 
     document.querySelectorAll(".navbar-nav .nav-link, .dropdown-item").forEach(link => {
-    const linkPage = link.getAttribute("href");
+        const linkHref = link.getAttribute("href");
+        if (!linkHref) return;
 
-    if (linkPage === currentPage) {
-        link.classList.add("active");
+        const linkPage = linkHref.split("/").pop();
 
-    // If inside dropdown → activate parent
-    const parentDropdown = link.closest(".dropdown");
-    if (parentDropdown) {
-        parentDropdown.classList.add("active");
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+
+            const parentDropdown = link.closest(".dropdown");
+            if (parentDropdown) {
+                parentDropdown.classList.add("active");
+            }
         }
-    }
     });
 
     // About-section
